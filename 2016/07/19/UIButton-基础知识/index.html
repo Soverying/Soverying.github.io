@@ -84,15 +84,37 @@
 
 
 
-<meta name="description" content="iOS开发，信息安全">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Soverying's Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2014/10/index.html">
+<meta name="description" content="UIButton的状态1.normal（普通状态）
+默认情况（Default）
+对应的枚举常量：UIControlStateNormal
+2.highlighted（高亮状态）
+按钮被按下去的时候（手指还未松开）
+对应的枚举常量：UIControlStateHighlighted
+3.disabled(失效状态，不可用状态）
+如果enabled属性为NO，就是处于disable状态，代表按钮不可以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UIButton 基础知识">
+<meta property="og:url" content="http://yoursite.com/2016/07/19/UIButton-基础知识/index.html">
 <meta property="og:site_name" content="Soverying's Blog">
-<meta property="og:description" content="iOS开发，信息安全">
+<meta property="og:description" content="UIButton的状态1.normal（普通状态）
+默认情况（Default）
+对应的枚举常量：UIControlStateNormal
+2.highlighted（高亮状态）
+按钮被按下去的时候（手指还未松开）
+对应的枚举常量：UIControlStateHighlighted
+3.disabled(失效状态，不可用状态）
+如果enabled属性为NO，就是处于disable状态，代表按钮不可以">
+<meta property="og:updated_time" content="2016-07-19T10:36:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Soverying's Blog">
-<meta name="twitter:description" content="iOS开发，信息安全">
+<meta name="twitter:title" content="UIButton 基础知识">
+<meta name="twitter:description" content="UIButton的状态1.normal（普通状态）
+默认情况（Default）
+对应的枚举常量：UIControlStateNormal
+2.highlighted（高亮状态）
+按钮被按下去的时候（手指还未松开）
+对应的枚举常量：UIControlStateHighlighted
+3.disabled(失效状态，不可用状态）
+如果enabled属性为NO，就是处于disable状态，代表按钮不可以">
 
 
 
@@ -113,9 +135,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2014/10/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/19/UIButton-基础知识/"/>
 
-  <title> 归档 | Soverying's Blog </title>
+  <title> UIButton 基础知识 | Soverying's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -136,7 +158,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,66 +266,155 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 5 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
 
-      
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                UIButton 基础知识
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-19T18:18:14+08:00" content="2016-07-19">
+              2016-07-19
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
       
 
       
+        <h3 id="UIButton的状态"><a href="#UIButton的状态" class="headerlink" title="UIButton的状态"></a>UIButton的状态</h3><pre><code>1.normal（普通状态）
+默认情况（Default）
+对应的枚举常量：UIControlStateNormal
+2.highlighted（高亮状态）
+按钮被按下去的时候（手指还未松开）
+对应的枚举常量：UIControlStateHighlighted
+3.disabled(失效状态，不可用状态）
+如果enabled属性为NO，就是处于disable状态，代表按钮不可以被点击
+对应的枚举常量：UIControlStateDisabled
+</code></pre><p>###UIButton的样式</p>
+<pre><code>在用代码创建按钮的同时指定按钮样式
+UIButton *btn = [UIButton  buttonWithType:UIButtonTypeCustom]; 
+UIButtonTypeCustom：无类型，按钮的内容需要自定义
+UIButtonTypeDetailDisclosure： 
+UIButtonTypeInfoLight： 
+UIButtonTypeInfoDark： 
+UIButtonTypeContactAdd
+</code></pre><p>注：为了保证高亮状态下的图片正常显示，必须设置按钮的type为custom</p>
+<p>###UIButton的常见设置<br>    设置按钮的文字</p>
+<pre><code>- (void)setTitle:(NSString *)title forState:(UIControlState)state;
+设置按钮的文字颜色
+- (void)setTitleColor:(UIColor *)color forState:(UIControlState)state;
+设置按钮内部的小图片
+- (void)setImage:(UIImage *)image forState:(UIControlState)state; 
+设置按钮的背景图片
+- (void)setBackgroundImage:(UIImage *)image forState:(UIControlState)state;
+
+设置按钮的文字字体（需要拿到按钮内部的label来设置）
+btn.titleLabel.font = [UIFont systemFontOfSize:13];
+获得按钮的文字
+- (NSString *)titleForState:(UIControlState)state; 
+获得按钮的文字颜色
+- (UIColor *)titleColorForState:(UIControlState)state;
+获得按钮内部的小图片
+- (UIImage *)imageForState:(UIControlState)state;
+获得按钮的背景图片
+- (UIImage *)backgroundImageForState:(UIControlState)state;
+</code></pre>
+      
+    </div>
+
+    <div>
+      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2014">2014</h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/10/12/UIView基础知识/" rel="next" title="UIView基础知识">
+                <i class="fa fa-chevron-left"></i> UIView基础知识
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/19/Plist文件使用/" rel="prev" title="Plist文件使用">
+                Plist文件使用 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
         </div>
       
-      
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2014/10/12/UIView基础知识/" itemprop="url">
-              
-                <span itemprop="name">UIView基础知识</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2014-10-12T18:09:20+08:00"
-              content="2014-10-12" >
-          10-12
-        </time>
-      </div>
-
-    </header>
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -311,6 +422,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -330,8 +445,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -396,6 +520,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#UIButton的状态"><span class="nav-number">1.</span> <span class="nav-text">UIButton的状态</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -492,11 +627,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   
