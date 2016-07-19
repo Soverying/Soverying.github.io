@@ -758,11 +758,18 @@
       
         
           
-            <p>###&#x4EC0;&#x4E48;&#x662F;Plist&#x6587;&#x4EF6;<br>    &#x5C5E;&#x6027;&#x5217;&#x8868;&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;NSArray&#x6216;&#x8005;NSDictionary&#x4E4B;&#x7C7B;&#x7684;&#x6570;&#x636E;&#xFF0C;<br>    &#x8FD9;&#x79CD;&#x201C;&#x5C5E;&#x6027;&#x5217;&#x8868;&#x6587;&#x4EF6;&#x201D;&#x7684;&#x6269;&#x5C55;&#x540D;&#x662F;plist&#xFF0C;&#x56E0;&#x6B64;&#x4E5F;&#x79F0;&#x4E3A;&#x201C;plist&#x6587;&#x4EF6;&#x201D;</p>
-<p>###&#x89E3;&#x6790;Plist&#x6587;&#x4EF6;<br>    1.&#x83B7;&#x5F97;Plist&#x6587;&#x4EF6;&#x7684;&#x5168;&#x8DEF;&#x5F84;<br>    NSBundle <em>bundle = [NSBundle mainBundle];<br>    NSString </em>path = [bundle pathForResource:@&#x201D;shops&#x201D; ofType:@&#x201D;plist&#x201D;];<br>    2.&#x52A0;&#x8F7D;plist&#x6587;&#x4EF6;<br>    models = [NSArray arrayWithContentsOfFile:path];</p>
-<p>###Plist&#x7684;&#x4F7F;&#x7528;&#x6CE8;&#x610F;<br>    plist&#x7684;&#x6587;&#x4EF6;&#x540D;&#x4E0D;&#x80FD;&#x53EB;&#x505A;&#x201C;info&#x201D;&#x3001;&#x201C;Info&#x201D;&#x4E4B;&#x7C7B;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;project&#x81EA;&#x5DF1;&#x6709;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x4E3A;info.plist</p>
-<p>###&#x4F7F;&#x7528;Plist&#x7684;&#x4F18;&#x70B9;<br>    plist&#x6587;&#x4EF6;&#x662F;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;<br>    &#x4E0E;&#x5C06;&#x6570;&#x636E;&#x5199;&#x5728;&#x4EE3;&#x7801;&#x91CC;&#x9762;&#x76F8;&#x6BD4;&#xFF0C;&#x5982;&#x679C;&#x6570;&#x636E;&#x7ECF;&#x5E38;&#x6539;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x7ECF;&#x5E38;&#x7FFB;&#x5F00;&#x5BF9;&#x5E94;&#x7684;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x9020;&#x6210;&#x4EE3;&#x7801;&#x6269;&#x5C55;&#x6027;&#x4F4E;&#x3002;<br>    &#x5C06;&#x6570;&#x636E;&#x653E;&#x5728;&#x6587;&#x4EF6;&#x4E2D;&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#xFF0C;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x540E;&#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6;&#x6700;&#x65B0;&#x7684;&#x6570;&#x636E;&#x3002;&#x5982;&#x679C;&#x53D8;&#x52A8;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x4EE3;&#x7801;&#x3002;</p>
-
+            <h3 id="&#x4EC0;&#x4E48;&#x662F;Plist&#x6587;&#x4EF6;"><a href="#&#x4EC0;&#x4E48;&#x662F;Plist&#x6587;&#x4EF6;" class="headerlink" title="&#x4EC0;&#x4E48;&#x662F;Plist&#x6587;&#x4EF6;"></a>&#x4EC0;&#x4E48;&#x662F;Plist&#x6587;&#x4EF6;</h3><pre><code>&#x5C5E;&#x6027;&#x5217;&#x8868;&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;NSArray&#x6216;&#x8005;NSDictionary&#x4E4B;&#x7C7B;&#x7684;&#x6570;&#x636E;&#xFF0C;
+&#x8FD9;&#x79CD;&#x201C;&#x5C5E;&#x6027;&#x5217;&#x8868;&#x6587;&#x4EF6;&#x201D;&#x7684;&#x6269;&#x5C55;&#x540D;&#x662F;plist&#xFF0C;&#x56E0;&#x6B64;&#x4E5F;&#x79F0;&#x4E3A;&#x201C;plist&#x6587;&#x4EF6;&#x201D;
+</code></pre><h3 id="&#x89E3;&#x6790;Plist&#x6587;&#x4EF6;"><a href="#&#x89E3;&#x6790;Plist&#x6587;&#x4EF6;" class="headerlink" title="&#x89E3;&#x6790;Plist&#x6587;&#x4EF6;"></a>&#x89E3;&#x6790;Plist&#x6587;&#x4EF6;</h3><pre><code>1.&#x83B7;&#x5F97;Plist&#x6587;&#x4EF6;&#x7684;&#x5168;&#x8DEF;&#x5F84;
+NSBundle *bundle = [NSBundle mainBundle];
+NSString *path = [bundle pathForResource:@&quot;shops&quot; ofType:@&quot;plist&quot;];
+2.&#x52A0;&#x8F7D;plist&#x6587;&#x4EF6;
+models = [NSArray arrayWithContentsOfFile:path];
+</code></pre><h3 id="Plist&#x7684;&#x4F7F;&#x7528;&#x6CE8;&#x610F;"><a href="#Plist&#x7684;&#x4F7F;&#x7528;&#x6CE8;&#x610F;" class="headerlink" title="Plist&#x7684;&#x4F7F;&#x7528;&#x6CE8;&#x610F;"></a>Plist&#x7684;&#x4F7F;&#x7528;&#x6CE8;&#x610F;</h3><pre><code>plist&#x7684;&#x6587;&#x4EF6;&#x540D;&#x4E0D;&#x80FD;&#x53EB;&#x505A;&#x201C;info&#x201D;&#x3001;&#x201C;Info&#x201D;&#x4E4B;&#x7C7B;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;project&#x81EA;&#x5DF1;&#x6709;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x4E3A;info.plist
+</code></pre><h3 id="&#x4F7F;&#x7528;Plist&#x7684;&#x4F18;&#x70B9;"><a href="#&#x4F7F;&#x7528;Plist&#x7684;&#x4F18;&#x70B9;" class="headerlink" title="&#x4F7F;&#x7528;Plist&#x7684;&#x4F18;&#x70B9;"></a>&#x4F7F;&#x7528;Plist&#x7684;&#x4F18;&#x70B9;</h3><pre><code>plist&#x6587;&#x4EF6;&#x662F;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;
+&#x4E0E;&#x5C06;&#x6570;&#x636E;&#x5199;&#x5728;&#x4EE3;&#x7801;&#x91CC;&#x9762;&#x76F8;&#x6BD4;&#xFF0C;&#x5982;&#x679C;&#x6570;&#x636E;&#x7ECF;&#x5E38;&#x6539;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x7ECF;&#x5E38;&#x7FFB;&#x5F00;&#x5BF9;&#x5E94;&#x7684;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x9020;&#x6210;&#x4EE3;&#x7801;&#x6269;&#x5C55;&#x6027;&#x4F4E;&#x3002;
+&#x5C06;&#x6570;&#x636E;&#x653E;&#x5728;&#x6587;&#x4EF6;&#x4E2D;&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#xFF0C;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x540E;&#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6;&#x6700;&#x65B0;&#x7684;&#x6570;&#x636E;&#x3002;&#x5982;&#x679C;&#x53D8;&#x52A8;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x4EE3;&#x7801;&#x3002;
+</code></pre>
           
         
       
@@ -883,8 +890,7 @@
 3.disabled(&#x5931;&#x6548;&#x72B6;&#x6001;&#xFF0C;&#x4E0D;&#x53EF;&#x7528;&#x72B6;&#x6001;&#xFF09;
 &#x5982;&#x679C;enabled&#x5C5E;&#x6027;&#x4E3A;NO&#xFF0C;&#x5C31;&#x662F;&#x5904;&#x4E8E;disable&#x72B6;&#x6001;&#xFF0C;&#x4EE3;&#x8868;&#x6309;&#x94AE;&#x4E0D;&#x53EF;&#x4EE5;&#x88AB;&#x70B9;&#x51FB;
 &#x5BF9;&#x5E94;&#x7684;&#x679A;&#x4E3E;&#x5E38;&#x91CF;&#xFF1A;UIControlStateDisabled
-</code></pre><p>###UIButton&#x7684;&#x6837;&#x5F0F;</p>
-<pre><code>&#x5728;&#x7528;&#x4EE3;&#x7801;&#x521B;&#x5EFA;&#x6309;&#x94AE;&#x7684;&#x540C;&#x65F6;&#x6307;&#x5B9A;&#x6309;&#x94AE;&#x6837;&#x5F0F;
+</code></pre><h3 id="UIButton&#x7684;&#x6837;&#x5F0F;"><a href="#UIButton&#x7684;&#x6837;&#x5F0F;" class="headerlink" title="UIButton&#x7684;&#x6837;&#x5F0F;"></a>UIButton&#x7684;&#x6837;&#x5F0F;</h3><pre><code>&#x5728;&#x7528;&#x4EE3;&#x7801;&#x521B;&#x5EFA;&#x6309;&#x94AE;&#x7684;&#x540C;&#x65F6;&#x6307;&#x5B9A;&#x6309;&#x94AE;&#x6837;&#x5F0F;
 UIButton *btn = [UIButton  buttonWithType:UIButtonTypeCustom]; 
 UIButtonTypeCustom&#xFF1A;&#x65E0;&#x7C7B;&#x578B;&#xFF0C;&#x6309;&#x94AE;&#x7684;&#x5185;&#x5BB9;&#x9700;&#x8981;&#x81EA;&#x5B9A;&#x4E49;
 UIButtonTypeDetailDisclosure&#xFF1A; 
@@ -892,8 +898,8 @@ UIButtonTypeInfoLight&#xFF1A;
 UIButtonTypeInfoDark&#xFF1A; 
 UIButtonTypeContactAdd
 </code></pre><p>&#x6CE8;&#xFF1A;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x9AD8;&#x4EAE;&#x72B6;&#x6001;&#x4E0B;&#x7684;&#x56FE;&#x7247;&#x6B63;&#x5E38;&#x663E;&#x793A;&#xFF0C;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x7684;type&#x4E3A;custom</p>
-<p>###UIButton&#x7684;&#x5E38;&#x89C1;&#x8BBE;&#x7F6E;<br>    &#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;</p>
-<pre><code>- (void)setTitle:(NSString *)title forState:(UIControlState)state;
+<h3 id="UIButton&#x7684;&#x5E38;&#x89C1;&#x8BBE;&#x7F6E;"><a href="#UIButton&#x7684;&#x5E38;&#x89C1;&#x8BBE;&#x7F6E;" class="headerlink" title="UIButton&#x7684;&#x5E38;&#x89C1;&#x8BBE;&#x7F6E;"></a>UIButton&#x7684;&#x5E38;&#x89C1;&#x8BBE;&#x7F6E;</h3><pre><code>&#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;
+- (void)setTitle:(NSString *)title forState:(UIControlState)state;
 &#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;&#x989C;&#x8272;
 - (void)setTitleColor:(UIColor *)color forState:(UIControlState)state;
 &#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x5185;&#x90E8;&#x7684;&#x5C0F;&#x56FE;&#x7247;

@@ -94,7 +94,7 @@
 <meta property="og:description" content="UIButton&amp;#x7684;&amp;#x72B6;&amp;#x6001;1.normal&amp;#xFF08;&amp;#x666E;&amp;#x901A;&amp;#x72B6;&amp;#x6001;&amp;#xFF09;
 &amp;#x9ED8;&amp;#x8BA4;&amp;#x60C5;&amp;#x51B5;&amp;#xFF08;Default&amp;#xFF09;
 &amp;#x5BF9;&amp;#x5E94;&amp;#x7684;&amp;#x679A;&amp;#x4E3E;&amp;#x5E38;&amp;#x91CF">
-<meta property="og:updated_time" content="2016-07-19T11:58:28.000Z">
+<meta property="og:updated_time" content="2016-07-19T14:27:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UIButton 基础知识">
 <meta name="twitter:description" content="UIButton&amp;#x7684;&amp;#x72B6;&amp;#x6001;1.normal&amp;#xFF08;&amp;#x666E;&amp;#x901A;&amp;#x72B6;&amp;#x6001;&amp;#xFF09;
@@ -340,8 +340,7 @@
 3.disabled(&#x5931;&#x6548;&#x72B6;&#x6001;&#xFF0C;&#x4E0D;&#x53EF;&#x7528;&#x72B6;&#x6001;&#xFF09;
 &#x5982;&#x679C;enabled&#x5C5E;&#x6027;&#x4E3A;NO&#xFF0C;&#x5C31;&#x662F;&#x5904;&#x4E8E;disable&#x72B6;&#x6001;&#xFF0C;&#x4EE3;&#x8868;&#x6309;&#x94AE;&#x4E0D;&#x53EF;&#x4EE5;&#x88AB;&#x70B9;&#x51FB;
 &#x5BF9;&#x5E94;&#x7684;&#x679A;&#x4E3E;&#x5E38;&#x91CF;&#xFF1A;UIControlStateDisabled
-</code></pre><p>###UIButton&#x7684;&#x6837;&#x5F0F;</p>
-<pre><code>&#x5728;&#x7528;&#x4EE3;&#x7801;&#x521B;&#x5EFA;&#x6309;&#x94AE;&#x7684;&#x540C;&#x65F6;&#x6307;&#x5B9A;&#x6309;&#x94AE;&#x6837;&#x5F0F;
+</code></pre><h3 id="UIButton&#x7684;&#x6837;&#x5F0F;"><a href="#UIButton&#x7684;&#x6837;&#x5F0F;" class="headerlink" title="UIButton&#x7684;&#x6837;&#x5F0F;"></a>UIButton&#x7684;&#x6837;&#x5F0F;</h3><pre><code>&#x5728;&#x7528;&#x4EE3;&#x7801;&#x521B;&#x5EFA;&#x6309;&#x94AE;&#x7684;&#x540C;&#x65F6;&#x6307;&#x5B9A;&#x6309;&#x94AE;&#x6837;&#x5F0F;
 UIButton *btn = [UIButton  buttonWithType:UIButtonTypeCustom]; 
 UIButtonTypeCustom&#xFF1A;&#x65E0;&#x7C7B;&#x578B;&#xFF0C;&#x6309;&#x94AE;&#x7684;&#x5185;&#x5BB9;&#x9700;&#x8981;&#x81EA;&#x5B9A;&#x4E49;
 UIButtonTypeDetailDisclosure&#xFF1A; 
@@ -349,8 +348,8 @@ UIButtonTypeInfoLight&#xFF1A;
 UIButtonTypeInfoDark&#xFF1A; 
 UIButtonTypeContactAdd
 </code></pre><p>&#x6CE8;&#xFF1A;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x9AD8;&#x4EAE;&#x72B6;&#x6001;&#x4E0B;&#x7684;&#x56FE;&#x7247;&#x6B63;&#x5E38;&#x663E;&#x793A;&#xFF0C;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x7684;type&#x4E3A;custom</p>
-<p>###UIButton&#x7684;&#x5E38;&#x89C1;&#x8BBE;&#x7F6E;<br>    &#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;</p>
-<pre><code>- (void)setTitle:(NSString *)title forState:(UIControlState)state;
+<h3 id="UIButton&#x7684;&#x5E38;&#x89C1;&#x8BBE;&#x7F6E;"><a href="#UIButton&#x7684;&#x5E38;&#x89C1;&#x8BBE;&#x7F6E;" class="headerlink" title="UIButton&#x7684;&#x5E38;&#x89C1;&#x8BBE;&#x7F6E;"></a>UIButton&#x7684;&#x5E38;&#x89C1;&#x8BBE;&#x7F6E;</h3><pre><code>&#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;
+- (void)setTitle:(NSString *)title forState:(UIControlState)state;
 &#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;&#x989C;&#x8272;
 - (void)setTitleColor:(UIColor *)color forState:(UIControlState)state;
 &#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x5185;&#x90E8;&#x7684;&#x5C0F;&#x56FE;&#x7247;
@@ -545,7 +544,7 @@ btn.titleLabel.font = [UIFont systemFontOfSize:13];
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#UIButton的状态"><span class="nav-number">1.</span> <span class="nav-text">UIButton的状态</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#UIButton的状态"><span class="nav-number">1.</span> <span class="nav-text">UIButton的状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIButton的样式"><span class="nav-number">2.</span> <span class="nav-text">UIButton的样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIButton的常见设置"><span class="nav-number">3.</span> <span class="nav-text">UIButton的常见设置</span></a></li></ol></div>
             
           </div>
         </section>
