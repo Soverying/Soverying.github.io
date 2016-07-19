@@ -84,37 +84,22 @@
 
 
 
-<meta name="description" content="UIButton的状态1.normal（普通状态）
-默认情况（Default）
-对应的枚举常量：UIControlStateNormal
-2.highlighted（高亮状态）
-按钮被按下去的时候（手指还未松开）
-对应的枚举常量：UIControlStateHighlighted
-3.disabled(失效状态，不可用状态）
-如果enabled属性为NO，就是处于disable状态，代表按钮不可以">
+<meta name="description" content="UIButton&amp;#x7684;&amp;#x72B6;&amp;#x6001;1.normal&amp;#xFF08;&amp;#x666E;&amp;#x901A;&amp;#x72B6;&amp;#x6001;&amp;#xFF09;
+&amp;#x9ED8;&amp;#x8BA4;&amp;#x60C5;&amp;#x51B5;&amp;#xFF08;Default&amp;#xFF09;
+&amp;#x5BF9;&amp;#x5E94;&amp;#x7684;&amp;#x679A;&amp;#x4E3E;&amp;#x5E38;&amp;#x91CF">
 <meta property="og:type" content="article">
 <meta property="og:title" content="UIButton 基础知识">
 <meta property="og:url" content="http://yoursite.com/2016/07/19/UIButton-基础知识/index.html">
 <meta property="og:site_name" content="Soverying's Blog">
-<meta property="og:description" content="UIButton的状态1.normal（普通状态）
-默认情况（Default）
-对应的枚举常量：UIControlStateNormal
-2.highlighted（高亮状态）
-按钮被按下去的时候（手指还未松开）
-对应的枚举常量：UIControlStateHighlighted
-3.disabled(失效状态，不可用状态）
-如果enabled属性为NO，就是处于disable状态，代表按钮不可以">
+<meta property="og:description" content="UIButton&amp;#x7684;&amp;#x72B6;&amp;#x6001;1.normal&amp;#xFF08;&amp;#x666E;&amp;#x901A;&amp;#x72B6;&amp;#x6001;&amp;#xFF09;
+&amp;#x9ED8;&amp;#x8BA4;&amp;#x60C5;&amp;#x51B5;&amp;#xFF08;Default&amp;#xFF09;
+&amp;#x5BF9;&amp;#x5E94;&amp;#x7684;&amp;#x679A;&amp;#x4E3E;&amp;#x5E38;&amp;#x91CF">
 <meta property="og:updated_time" content="2016-07-19T11:58:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UIButton 基础知识">
-<meta name="twitter:description" content="UIButton的状态1.normal（普通状态）
-默认情况（Default）
-对应的枚举常量：UIControlStateNormal
-2.highlighted（高亮状态）
-按钮被按下去的时候（手指还未松开）
-对应的枚举常量：UIControlStateHighlighted
-3.disabled(失效状态，不可用状态）
-如果enabled属性为NO，就是处于disable状态，代表按钮不可以">
+<meta name="twitter:description" content="UIButton&amp;#x7684;&amp;#x72B6;&amp;#x6001;1.normal&amp;#xFF08;&amp;#x666E;&amp;#x901A;&amp;#x72B6;&amp;#x6001;&amp;#xFF09;
+&amp;#x9ED8;&amp;#x8BA4;&amp;#x60C5;&amp;#x51B5;&amp;#xFF08;Default&amp;#xFF09;
+&amp;#x5BF9;&amp;#x5E94;&amp;#x7684;&amp;#x679A;&amp;#x4E3E;&amp;#x5E38;&amp;#x91CF">
 
 
 
@@ -346,42 +331,42 @@
       
 
       
-        <h3 id="UIButton的状态"><a href="#UIButton的状态" class="headerlink" title="UIButton的状态"></a>UIButton的状态</h3><pre><code>1.normal（普通状态）
-默认情况（Default）
-对应的枚举常量：UIControlStateNormal
-2.highlighted（高亮状态）
-按钮被按下去的时候（手指还未松开）
-对应的枚举常量：UIControlStateHighlighted
-3.disabled(失效状态，不可用状态）
-如果enabled属性为NO，就是处于disable状态，代表按钮不可以被点击
-对应的枚举常量：UIControlStateDisabled
-</code></pre><p>###UIButton的样式</p>
-<pre><code>在用代码创建按钮的同时指定按钮样式
+        <h3 id="UIButton&#x7684;&#x72B6;&#x6001;"><a href="#UIButton&#x7684;&#x72B6;&#x6001;" class="headerlink" title="UIButton&#x7684;&#x72B6;&#x6001;"></a>UIButton&#x7684;&#x72B6;&#x6001;</h3><pre><code>1.normal&#xFF08;&#x666E;&#x901A;&#x72B6;&#x6001;&#xFF09;
+&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#xFF08;Default&#xFF09;
+&#x5BF9;&#x5E94;&#x7684;&#x679A;&#x4E3E;&#x5E38;&#x91CF;&#xFF1A;UIControlStateNormal
+2.highlighted&#xFF08;&#x9AD8;&#x4EAE;&#x72B6;&#x6001;&#xFF09;
+&#x6309;&#x94AE;&#x88AB;&#x6309;&#x4E0B;&#x53BB;&#x7684;&#x65F6;&#x5019;&#xFF08;&#x624B;&#x6307;&#x8FD8;&#x672A;&#x677E;&#x5F00;&#xFF09;
+&#x5BF9;&#x5E94;&#x7684;&#x679A;&#x4E3E;&#x5E38;&#x91CF;&#xFF1A;UIControlStateHighlighted
+3.disabled(&#x5931;&#x6548;&#x72B6;&#x6001;&#xFF0C;&#x4E0D;&#x53EF;&#x7528;&#x72B6;&#x6001;&#xFF09;
+&#x5982;&#x679C;enabled&#x5C5E;&#x6027;&#x4E3A;NO&#xFF0C;&#x5C31;&#x662F;&#x5904;&#x4E8E;disable&#x72B6;&#x6001;&#xFF0C;&#x4EE3;&#x8868;&#x6309;&#x94AE;&#x4E0D;&#x53EF;&#x4EE5;&#x88AB;&#x70B9;&#x51FB;
+&#x5BF9;&#x5E94;&#x7684;&#x679A;&#x4E3E;&#x5E38;&#x91CF;&#xFF1A;UIControlStateDisabled
+</code></pre><p>###UIButton&#x7684;&#x6837;&#x5F0F;</p>
+<pre><code>&#x5728;&#x7528;&#x4EE3;&#x7801;&#x521B;&#x5EFA;&#x6309;&#x94AE;&#x7684;&#x540C;&#x65F6;&#x6307;&#x5B9A;&#x6309;&#x94AE;&#x6837;&#x5F0F;
 UIButton *btn = [UIButton  buttonWithType:UIButtonTypeCustom]; 
-UIButtonTypeCustom：无类型，按钮的内容需要自定义
-UIButtonTypeDetailDisclosure： 
-UIButtonTypeInfoLight： 
-UIButtonTypeInfoDark： 
+UIButtonTypeCustom&#xFF1A;&#x65E0;&#x7C7B;&#x578B;&#xFF0C;&#x6309;&#x94AE;&#x7684;&#x5185;&#x5BB9;&#x9700;&#x8981;&#x81EA;&#x5B9A;&#x4E49;
+UIButtonTypeDetailDisclosure&#xFF1A; 
+UIButtonTypeInfoLight&#xFF1A; 
+UIButtonTypeInfoDark&#xFF1A; 
 UIButtonTypeContactAdd
-</code></pre><p>注：为了保证高亮状态下的图片正常显示，必须设置按钮的type为custom</p>
-<p>###UIButton的常见设置<br>    设置按钮的文字</p>
+</code></pre><p>&#x6CE8;&#xFF1A;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x9AD8;&#x4EAE;&#x72B6;&#x6001;&#x4E0B;&#x7684;&#x56FE;&#x7247;&#x6B63;&#x5E38;&#x663E;&#x793A;&#xFF0C;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x7684;type&#x4E3A;custom</p>
+<p>###UIButton&#x7684;&#x5E38;&#x89C1;&#x8BBE;&#x7F6E;<br>    &#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;</p>
 <pre><code>- (void)setTitle:(NSString *)title forState:(UIControlState)state;
-设置按钮的文字颜色
+&#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;&#x989C;&#x8272;
 - (void)setTitleColor:(UIColor *)color forState:(UIControlState)state;
-设置按钮内部的小图片
+&#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x5185;&#x90E8;&#x7684;&#x5C0F;&#x56FE;&#x7247;
 - (void)setImage:(UIImage *)image forState:(UIControlState)state; 
-设置按钮的背景图片
+&#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x7684;&#x80CC;&#x666F;&#x56FE;&#x7247;
 - (void)setBackgroundImage:(UIImage *)image forState:(UIControlState)state;
 
-设置按钮的文字字体（需要拿到按钮内部的label来设置）
+&#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;&#x5B57;&#x4F53;&#xFF08;&#x9700;&#x8981;&#x62FF;&#x5230;&#x6309;&#x94AE;&#x5185;&#x90E8;&#x7684;label&#x6765;&#x8BBE;&#x7F6E;&#xFF09;
 btn.titleLabel.font = [UIFont systemFontOfSize:13];
-获得按钮的文字
+&#x83B7;&#x5F97;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;
 - (NSString *)titleForState:(UIControlState)state; 
-获得按钮的文字颜色
+&#x83B7;&#x5F97;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;&#x989C;&#x8272;
 - (UIColor *)titleColorForState:(UIControlState)state;
-获得按钮内部的小图片
+&#x83B7;&#x5F97;&#x6309;&#x94AE;&#x5185;&#x90E8;&#x7684;&#x5C0F;&#x56FE;&#x7247;
 - (UIImage *)imageForState:(UIControlState)state;
-获得按钮的背景图片
+&#x83B7;&#x5F97;&#x6309;&#x94AE;&#x7684;&#x80CC;&#x666F;&#x56FE;&#x7247;
 - (UIImage *)backgroundImageForState:(UIControlState)state;
 </code></pre>
       
@@ -485,7 +470,7 @@ btn.titleLabel.font = [UIFont systemFontOfSize:13];
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

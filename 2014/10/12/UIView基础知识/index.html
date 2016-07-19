@@ -84,28 +84,16 @@
 
 
 
-<meta name="description" content="UIView简介所有的控件最终都继承自UIView（苹果将控件的共同属性都抽取到父类UIView）
-UIView属性@property(nonatomic) CGRect frame;
-控件矩形框在父控件中的位置和尺寸(以父控件的左上角为坐标原点)
-@property(nonatomic) CGRect bounds;
-控件矩形框的位置和尺寸(以自己左上角为坐标原点，所以bounds的x、y一般为">
+<meta name="description" content="UIView&amp;#x7B80;&amp;#x4ECB;&amp;#x6240;&amp;#x6709;&amp;#x7684;&amp;#x63A7;&amp;#x4EF6;&amp;#x6700;&amp;#x7EC8;&amp;#x90FD;&amp;#x7EE7;&amp;#x627F;&amp;#x81EA;UIView&amp;#xFF08;&amp;#x82F9;&amp;#x679C;&amp;#x5C06;&amp;#x63A7;&amp;#x4EF6;&amp;#x7684;&amp;#x5171;&amp;#x540C;&amp;#x5C5E;&amp;#x6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="UIView基础知识">
 <meta property="og:url" content="http://yoursite.com/2014/10/12/UIView基础知识/index.html">
 <meta property="og:site_name" content="Soverying's Blog">
-<meta property="og:description" content="UIView简介所有的控件最终都继承自UIView（苹果将控件的共同属性都抽取到父类UIView）
-UIView属性@property(nonatomic) CGRect frame;
-控件矩形框在父控件中的位置和尺寸(以父控件的左上角为坐标原点)
-@property(nonatomic) CGRect bounds;
-控件矩形框的位置和尺寸(以自己左上角为坐标原点，所以bounds的x、y一般为">
+<meta property="og:description" content="UIView&amp;#x7B80;&amp;#x4ECB;&amp;#x6240;&amp;#x6709;&amp;#x7684;&amp;#x63A7;&amp;#x4EF6;&amp;#x6700;&amp;#x7EC8;&amp;#x90FD;&amp;#x7EE7;&amp;#x627F;&amp;#x81EA;UIView&amp;#xFF08;&amp;#x82F9;&amp;#x679C;&amp;#x5C06;&amp;#x63A7;&amp;#x4EF6;&amp;#x7684;&amp;#x5171;&amp;#x540C;&amp;#x5C5E;&amp;#x6">
 <meta property="og:updated_time" content="2016-07-19T11:58:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UIView基础知识">
-<meta name="twitter:description" content="UIView简介所有的控件最终都继承自UIView（苹果将控件的共同属性都抽取到父类UIView）
-UIView属性@property(nonatomic) CGRect frame;
-控件矩形框在父控件中的位置和尺寸(以父控件的左上角为坐标原点)
-@property(nonatomic) CGRect bounds;
-控件矩形框的位置和尺寸(以自己左上角为坐标原点，所以bounds的x、y一般为">
+<meta name="twitter:description" content="UIView&amp;#x7B80;&amp;#x4ECB;&amp;#x6240;&amp;#x6709;&amp;#x7684;&amp;#x63A7;&amp;#x4EF6;&amp;#x6700;&amp;#x7EC8;&amp;#x90FD;&amp;#x7EE7;&amp;#x627F;&amp;#x81EA;UIView&amp;#xFF08;&amp;#x82F9;&amp;#x679C;&amp;#x5C06;&amp;#x63A7;&amp;#x4EF6;&amp;#x7684;&amp;#x5171;&amp;#x540C;&amp;#x5C5E;&amp;#x6">
 
 
 
@@ -337,38 +325,38 @@ UIView属性@property(nonatomic) CGRect frame;
       
 
       
-        <h3 id="UIView简介"><a href="#UIView简介" class="headerlink" title="UIView简介"></a>UIView简介</h3><p>所有的控件最终都继承自UIView（苹果将控件的共同属性都抽取到父类UIView）</p>
-<h3 id="UIView属性"><a href="#UIView属性" class="headerlink" title="UIView属性"></a>UIView属性</h3><pre><code>@property(nonatomic) CGRect frame;
-控件矩形框在父控件中的位置和尺寸(以父控件的左上角为坐标原点)
+        <h3 id="UIView&#x7B80;&#x4ECB;"><a href="#UIView&#x7B80;&#x4ECB;" class="headerlink" title="UIView&#x7B80;&#x4ECB;"></a>UIView&#x7B80;&#x4ECB;</h3><p>&#x6240;&#x6709;&#x7684;&#x63A7;&#x4EF6;&#x6700;&#x7EC8;&#x90FD;&#x7EE7;&#x627F;&#x81EA;UIView&#xFF08;&#x82F9;&#x679C;&#x5C06;&#x63A7;&#x4EF6;&#x7684;&#x5171;&#x540C;&#x5C5E;&#x6027;&#x90FD;&#x62BD;&#x53D6;&#x5230;&#x7236;&#x7C7B;UIView&#xFF09;</p>
+<h3 id="UIView&#x5C5E;&#x6027;"><a href="#UIView&#x5C5E;&#x6027;" class="headerlink" title="UIView&#x5C5E;&#x6027;"></a>UIView&#x5C5E;&#x6027;</h3><pre><code>@property(nonatomic) CGRect frame;
+&#x63A7;&#x4EF6;&#x77E9;&#x5F62;&#x6846;&#x5728;&#x7236;&#x63A7;&#x4EF6;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#x548C;&#x5C3A;&#x5BF8;(&#x4EE5;&#x7236;&#x63A7;&#x4EF6;&#x7684;&#x5DE6;&#x4E0A;&#x89D2;&#x4E3A;&#x5750;&#x6807;&#x539F;&#x70B9;)
 @property(nonatomic) CGRect bounds;
-控件矩形框的位置和尺寸(以自己左上角为坐标原点，所以bounds的x、y一般为0)
+&#x63A7;&#x4EF6;&#x77E9;&#x5F62;&#x6846;&#x7684;&#x4F4D;&#x7F6E;&#x548C;&#x5C3A;&#x5BF8;(&#x4EE5;&#x81EA;&#x5DF1;&#x5DE6;&#x4E0A;&#x89D2;&#x4E3A;&#x5750;&#x6807;&#x539F;&#x70B9;&#xFF0C;&#x6240;&#x4EE5;bounds&#x7684;x&#x3001;y&#x4E00;&#x822C;&#x4E3A;0)
 @property(nonatomic) CGPoint center;
-控件中点的位置(以父控件的左上角为坐标原点)
+&#x63A7;&#x4EF6;&#x4E2D;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;(&#x4EE5;&#x7236;&#x63A7;&#x4EF6;&#x7684;&#x5DE6;&#x4E0A;&#x89D2;&#x4E3A;&#x5750;&#x6807;&#x539F;&#x70B9;)
 
 @property(nonatomic,readonly) UIView *superview;
-获得自己的父控件对象
+&#x83B7;&#x5F97;&#x81EA;&#x5DF1;&#x7684;&#x7236;&#x63A7;&#x4EF6;&#x5BF9;&#x8C61;
 @property(nonatomic,readonly,copy) NSArray *subviews;
-获得自己的所有子控件对象
-数组元素的顺序决定着子控件的显示层级顺序（下标越大的，越显示在上面)
+&#x83B7;&#x5F97;&#x81EA;&#x5DF1;&#x7684;&#x6240;&#x6709;&#x5B50;&#x63A7;&#x4EF6;&#x5BF9;&#x8C61;
+&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x7684;&#x987A;&#x5E8F;&#x51B3;&#x5B9A;&#x7740;&#x5B50;&#x63A7;&#x4EF6;&#x7684;&#x663E;&#x793A;&#x5C42;&#x7EA7;&#x987A;&#x5E8F;&#xFF08;&#x4E0B;&#x6807;&#x8D8A;&#x5927;&#x7684;&#xFF0C;&#x8D8A;&#x663E;&#x793A;&#x5728;&#x4E0A;&#x9762;)
 
 @property(nonatomic) NSInteger tag;
-控件的ID(标识)，父控件可以通过tag来找到对应的子控件                
+&#x63A7;&#x4EF6;&#x7684;ID(&#x6807;&#x8BC6;)&#xFF0C;&#x7236;&#x63A7;&#x4EF6;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;tag&#x6765;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x5B50;&#x63A7;&#x4EF6;                
 @property(nonatomic) CGAffineTransform transform;
-控件的形变属性(可以设置旋转角度、比例缩放、平移等属性)
-</code></pre><h4 id="UIView的常见方法"><a href="#UIView的常见方法" class="headerlink" title="UIView的常见方法"></a>UIView的常见方法</h4><pre><code>addSubview:
-添加一个子控件
-使用这个方法添加的子控件会被塞到subviews数组的最后面
+&#x63A7;&#x4EF6;&#x7684;&#x5F62;&#x53D8;&#x5C5E;&#x6027;(&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#x3001;&#x6BD4;&#x4F8B;&#x7F29;&#x653E;&#x3001;&#x5E73;&#x79FB;&#x7B49;&#x5C5E;&#x6027;)
+</code></pre><h4 id="UIView&#x7684;&#x5E38;&#x89C1;&#x65B9;&#x6CD5;"><a href="#UIView&#x7684;&#x5E38;&#x89C1;&#x65B9;&#x6CD5;" class="headerlink" title="UIView&#x7684;&#x5E38;&#x89C1;&#x65B9;&#x6CD5;"></a>UIView&#x7684;&#x5E38;&#x89C1;&#x65B9;&#x6CD5;</h4><pre><code>addSubview:
+&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x5B50;&#x63A7;&#x4EF6;
+&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x6DFB;&#x52A0;&#x7684;&#x5B50;&#x63A7;&#x4EF6;&#x4F1A;&#x88AB;&#x585E;&#x5230;subviews&#x6570;&#x7EC4;&#x7684;&#x6700;&#x540E;&#x9762;
 
-可以使用下面的方法调整子控件在subview数组中的顺序
-// 将子控件view插入到subviews数组的index位置
+&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x65B9;&#x6CD5;&#x8C03;&#x6574;&#x5B50;&#x63A7;&#x4EF6;&#x5728;subview&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x987A;&#x5E8F;
+// &#x5C06;&#x5B50;&#x63A7;&#x4EF6;view&#x63D2;&#x5165;&#x5230;subviews&#x6570;&#x7EC4;&#x7684;index&#x4F4D;&#x7F6E;
 - (void)insertSubview:(UIView *)view atIndex:(NSInteger)index;
-// 将子控件view显示到子控件siblingSubview的下面
+// &#x5C06;&#x5B50;&#x63A7;&#x4EF6;view&#x663E;&#x793A;&#x5230;&#x5B50;&#x63A7;&#x4EF6;siblingSubview&#x7684;&#x4E0B;&#x9762;
 - (void)insertSubview:(UIView *)view belowSubview:(UIView *)siblingSubview;
-// 将子控件view显示到子控件siblingSubview的上面
+// &#x5C06;&#x5B50;&#x63A7;&#x4EF6;view&#x663E;&#x793A;&#x5230;&#x5B50;&#x63A7;&#x4EF6;siblingSubview&#x7684;&#x4E0A;&#x9762;
 - (void)insertSubview:(UIView *)view aboveSubview:(UIView *)siblingSubview;
-// 将子控件view放到数组的最后面，显示在最上面
+// &#x5C06;&#x5B50;&#x63A7;&#x4EF6;view&#x653E;&#x5230;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x540E;&#x9762;&#xFF0C;&#x663E;&#x793A;&#x5728;&#x6700;&#x4E0A;&#x9762;
 - (void)bringSubviewToFront:(UIView *)view;
-// 将子控件view放到数组的最前面，显示在最下面
+// &#x5C06;&#x5B50;&#x63A7;&#x4EF6;view&#x653E;&#x5230;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x524D;&#x9762;&#xFF0C;&#x663E;&#x793A;&#x5728;&#x6700;&#x4E0B;&#x9762;
 - (void)sendSubviewToBack:(UIView *)view;
 </code></pre>
       
@@ -468,7 +456,7 @@ UIView属性@property(nonatomic) CGRect frame;
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
