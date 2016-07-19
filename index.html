@@ -86,13 +86,12 @@
 
 <meta name="description" content="iOS开发，信息安全">
 <meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta property="og:title" content="Soverying's Blog">
+<meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Soverying's Blog">
 <meta property="og:description" content="iOS开发，信息安全">
-<meta property="og:updated_time" content="2016-07-19T08:12:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
+<meta name="twitter:title" content="Soverying's Blog">
 <meta name="twitter:description" content="iOS开发，信息安全">
 
 
@@ -114,15 +113,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/"/>
+  <link rel="canonical" href="http://yoursite.com/"/>
 
-  <title>
-  
-
-  
-    分类 | Soverying's Blog
-  
-</title>
+  <title> Soverying's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +136,9 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -250,20 +245,136 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
+  <section id="posts" class="posts-expand">
+    
+      
 
-  <div id="posts" class="posts-expand">
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-    
-      <div class="category-all-page">
-        <div class="category-all-title">
-            暂无分类
-        </div>
-        <div class="category-all">
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/19/UIView基础知识/" itemprop="url">
+                  UIView基础知识
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-19T18:09:20+08:00" content="2016-07-19">
+              2016-07-19
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
           
         </div>
-      </div>
+      </header>
     
-  </div>
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="UIView简介"><a href="#UIView简介" class="headerlink" title="UIView简介"></a>UIView简介</h3><p>所有的控件最终都继承自UIView（苹果将控件的共同属性都抽取到父类UIView）</p>
+<h3 id="UIView属性"><a href="#UIView属性" class="headerlink" title="UIView属性"></a>UIView属性</h3><pre><code>@property(nonatomic) CGRect frame;
+控件矩形框在父控件中的位置和尺寸(以父控件的左上角为坐标原点)
+@property(nonatomic) CGRect bounds;
+控件矩形框的位置和尺寸(以自己左上角为坐标原点，所以bounds的x、y一般为0)
+@property(nonatomic) CGPoint center;
+控件中点的位置(以父控件的左上角为坐标原点)
+
+@property(nonatomic,readonly) UIView *superview;
+获得自己的父控件对象
+@property(nonatomic,readonly,copy) NSArray *subviews;
+获得自己的所有子控件对象
+数组元素的顺序决定着子控件的显示层级顺序（下标越大的，越显示在上面)
+
+@property(nonatomic) NSInteger tag;
+控件的ID(标识)，父控件可以通过tag来找到对应的子控件  @property(nonatomic) CGAffineTransform transform;
+控件的形变属性(可以设置旋转角度、比例缩放、平移等属性)
+</code></pre><h4 id="UIView的常见方法"><a href="#UIView的常见方法" class="headerlink" title="UIView的常见方法"></a>UIView的常见方法</h4><pre><code>addSubview:
+添加一个子控件
+使用这个方法添加的子控件会被塞到subviews数组的最后面
+
+可以使用下面的方法调整子控件在subview数组中的顺序
+// 将子控件view插入到subviews数组的index位置
+- (void)insertSubview:(UIView *)view atIndex:(NSInteger)index;
+// 将子控件view显示到子控件siblingSubview的下面
+- (void)insertSubview:(UIView *)view belowSubview:(UIView *)siblingSubview;
+// 将子控件view显示到子控件siblingSubview的上面
+- (void)insertSubview:(UIView *)view aboveSubview:(UIView *)siblingSubview;
+// 将子控件view放到数组的最后面，显示在最上面
+- (void)bringSubviewToFront:(UIView *)view;
+// 将子控件view放到数组的最前面，显示在最下面
+- (void)sendSubviewToBack:(UIView *)view;
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
 
 
           </div>
@@ -271,10 +382,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
