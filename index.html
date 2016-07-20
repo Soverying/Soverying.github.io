@@ -268,8 +268,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/20/iOS/iOS设计模式/iOS中MVVM设计模式/" itemprop="url">
-                  iOS中MVVM设计模式
+                <a class="post-title-link" href="/2016/07/20/C语言中的const/" itemprop="url">
+                  C语言中的const
                 </a>
               
             
@@ -282,7 +282,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-20T22:56:22+08:00" content="2016-07-20">
+            <time itemprop="dateCreated" datetime="2016-07-20T23:44:19+08:00" content="2016-07-20">
               2016-07-20
             </time>
           </span>
@@ -361,8 +361,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/20/iOS/iOS设计模式/iOS中MVP设计模式/" itemprop="url">
-                  iOS中MVP设计模式
+                <a class="post-title-link" href="/2016/07/20/C语言深度学习/C语言中的关键字static/" itemprop="url">
+                  C语言中的关键字static
                 </a>
               
             
@@ -375,7 +375,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-20T22:55:56+08:00" content="2016-07-20">
+            <time itemprop="dateCreated" datetime="2016-07-20T23:43:08+08:00" content="2016-07-20">
               2016-07-20
             </time>
           </span>
@@ -454,8 +454,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/20/iOS/iOS设计模式/iOS中MVC设计模式/" itemprop="url">
-                  iOS中MVC设计模式
+                <a class="post-title-link" href="/2016/07/20/C语言深度学习/C语言中的关键字register/" itemprop="url">
+                  C语言中的关键字register
                 </a>
               
             
@@ -468,7 +468,121 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-20T22:55:27+08:00" content="2016-07-20">
+            <time itemprop="dateCreated" datetime="2016-07-20T23:22:22+08:00" content="2016-07-20">
+              2016-07-20
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li><p>register 关键字的作用</p>
+<p>该关键字请求编译器<strong>尽可能</strong>地将变量存在CPU内部寄存器中,而不是内存寻址访问以提高效率。</p>
+<p>  注意：是尽可能而不是绝对，因为一个CPU的寄存器的数量是有限的，如果用户定义太多的register变量，那么一部分注定不能放倒寄存器变量中，达不到相应的效果。</p>
+</li>
+<li><p>register 关键字举例</p>
+<p> register修饰符暗示编译程序相应的变量将被频繁地使用，如果可能的话，应将其保存在CPU的寄存器中，以加快其存储速度。例如下面的内存块拷贝代码，</p>
+</li>
+</ul>
+  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> NOSTRUCTASSIGN</span></div><div class="line">　　<span class="built_in">memcpy</span> (d, s, l)</div><div class="line">　　&#123;</div><div class="line">     <span class="keyword">register</span> <span class="keyword">char</span> *d;</div><div class="line">　　    <span class="keyword">register</span> <span class="keyword">char</span> *s;</div><div class="line">　　    <span class="keyword">register</span> <span class="keyword">int</span> i;</div><div class="line">　　    <span class="keyword">while</span> (i--)</div><div class="line">　　        *d++ = *s++;</div><div class="line">　　&#125;</div><div class="line">　　<span class="meta">#<span class="meta-keyword">endif</span></span></div></pre></td></tr></table></figure>
+<ul>
+<li><p>使用register 修饰符的注意点</p>
+<p>  首先，register变量必须是能被CPU所接受的类型。这通常意味着register变量必须是一个单个的值，并且长度应该小于或者等于整型的长度。不过，有些机器的寄存器也能存放浮点数。</p>
+<p>   其次，因为register变量可能不存放在内存中，所以不能用“&amp;”来获取register变量的地址。</p>
+</li>
+</ul>
+<ul>
+<li><p>使用register 修饰符不当造成的后果</p>
+<p>  1.由于寄存器的数量有限，而且某些寄存器只能接受特定类型的数据（如指针和浮点数），因此真正起作用的register修饰符的数目和类型都依赖于运行程序的机器，而任何多余的register修饰符都将被编译程序所忽略。<br>  2.在某些情况下，把变量保存在寄存器中反而会降低程序的运行速度。因为被占用的寄存器不能再用于其它目的；或者变量被使用的次数不够多，不足以装入和存储变量所带来的额外开销。<br>　　早期的C编译程序不会把变量保存在寄存器中，除非你命令它这样做，这时register修饰符是C语言的一种很有价值的补充。然而，随着编译程序设计技术的进步，在决定那些变量应该被存到寄存器中时，现在的C编译环境能比程序员做出更好的决定。实际上，许多编译程序都会忽略register修饰符，因为尽管它完全合法，但它仅仅是暗示而不是命令。</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/20/信息安全/时间戳的原理和意义/" itemprop="url">
+                  时间戳的原理和意义
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-20T23:17:21+08:00" content="2016-07-20">
               2016-07-20
             </time>
           </span>
@@ -547,8 +661,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/20/iOS/iOS三方库解读/SDWebImage源码解析/" itemprop="url">
-                  SDWebImage源码解析
+                <a class="post-title-link" href="/2016/07/20/网络/TCP为什么断开连接需要四次挥手/" itemprop="url">
+                  TCP为什么断开连接需要四次挥手
                 </a>
               
             
@@ -561,7 +675,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-20T22:53:40+08:00" content="2016-07-20">
+            <time itemprop="dateCreated" datetime="2016-07-20T23:17:00+08:00" content="2016-07-20">
               2016-07-20
             </time>
           </span>
@@ -640,8 +754,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/20/iOS/iOS优化/UITableView的优化/" itemprop="url">
-                  UITableView的优化
+                <a class="post-title-link" href="/2016/07/20/iOS/iOS设计模式/delegate总结/" itemprop="url">
+                  delegate总结
                 </a>
               
             
@@ -654,7 +768,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-20T22:49:36+08:00" content="2016-07-20">
+            <time itemprop="dateCreated" datetime="2016-07-20T23:16:01+08:00" content="2016-07-20">
               2016-07-20
             </time>
           </span>
@@ -733,8 +847,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/20/iOS/iOSUI基础知识/UITableView的每一行都是一个UITableViewCell，通过dataSource的tableView-cellForRowAtIndexPath-方法来初始化每一行/" itemprop="url">
-                  UITableView的每一行都是一个UITableViewCell，通过dataSource的tableView:cellForRowAtIndexPath:方法来初始化每一行
+                <a class="post-title-link" href="/2016/07/20/iOS/iOS设计模式/NSNotification详解/" itemprop="url">
+                  NSNotification详解
                 </a>
               
             
@@ -747,7 +861,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-20T22:49:10+08:00" content="2016-07-20">
+            <time itemprop="dateCreated" datetime="2016-07-20T23:15:39+08:00" content="2016-07-20">
               2016-07-20
             </time>
           </span>
@@ -826,8 +940,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/20/iOS/iOSUI基础知识/UITableView基础知识/" itemprop="url">
-                  UITableView基础知识
+                <a class="post-title-link" href="/2016/07/20/iOS/iOS设计模式/KVO详解/" itemprop="url">
+                  KVO详解
                 </a>
               
             
@@ -840,7 +954,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-20T22:31:55+08:00" content="2016-07-20">
+            <time itemprop="dateCreated" datetime="2016-07-20T23:14:58+08:00" content="2016-07-20">
               2016-07-20
             </time>
           </span>
@@ -870,28 +984,7 @@
       
         
           
-            <h3 id="UITableView展示数据的过程"><a href="#UITableView展示数据的过程" class="headerlink" title="UITableView展示数据的过程"></a>UITableView展示数据的过程</h3><pre><code>UITableView需要一个数据源(dataSource)来显示数据
-UITableView会向数据源查询一共有多少行数据以及每一行显示什么数据等
-补充：凡是遵守UITableViewDataSource协议的OC对象，都可以是UITableView的数据源 
-
-下面用代码辅助解释：
-1.调用数据源的下面方法得知一共有多少组数据
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
-
-2.调用数据源的下面方法得知每一组有多少行数据
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
-
-3.调用数据源的下面方法得知每一行显示什么内容
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;  
-</code></pre><h3 id="Cell简介"><a href="#Cell简介" class="headerlink" title="Cell简介"></a>Cell简介</h3><pre><code>UITableView的每一行都是一个UITableViewCell，通过dataSource的tableView:cellForRowAtIndexPath:方法来初始化每一行
-UITableViewCell内部有个默认的子视图:contentView，contentView是UITableViewCell所显示内容的父视图，可显示一些辅助指示视图
-
-辅助指示视图的作用是显示一个表示动作的图标，可以通过设置UITableViewCell的accessoryType来显示，默认是UITableViewCellAccessoryNone(不显示辅助指示视图)，其他值如下:
-UITableViewCellAccessoryDisclosureIndicator
-UITableViewCellAccessoryDetailDisclosureButton
-UITableViewCellAccessoryCheckmark
-还可以通过cell的accessoryView属性来自定义辅助指示视图（比如往右边放一个开关）
-</code></pre>
+            
           
         
       
@@ -940,8 +1033,8 @@ UITableViewCellAccessoryCheckmark
             
               
                 
-                <a class="post-title-link" href="/2016/07/20/iOS/iOS多线程/NSTimer基础知识/" itemprop="url">
-                  NSTimer基础知识
+                <a class="post-title-link" href="/2016/07/20/iOS/iOS设计模式/KVC机制/" itemprop="url">
+                  KVC机制
                 </a>
               
             
@@ -954,7 +1047,7 @@ UITableViewCellAccessoryCheckmark
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-20T21:06:39+08:00" content="2016-07-20">
+            <time itemprop="dateCreated" datetime="2016-07-20T23:14:38+08:00" content="2016-07-20">
               2016-07-20
             </time>
           </span>
@@ -984,20 +1077,7 @@ UITableViewCellAccessoryCheckmark
       
         
           
-            <h3 id="NSTimer-作用"><a href="#NSTimer-作用" class="headerlink" title="NSTimer 作用"></a>NSTimer 作用</h3><pre><code>在指定的时间执行指定的任务
-每隔一段时间执行指定的任务
-</code></pre><h3 id="NSTimer-方法"><a href="#NSTimer-方法" class="headerlink" title="NSTimer 方法"></a>NSTimer 方法</h3><pre><code> 1.调用下面的方法就会开启一个定时任务
-+ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)ti         target:(id)aTarget 
-selector:(SEL)aSelector 
-userInfo:(id)userInfo 
-repeats:(BOOL)yesOrNo;
-每隔ti秒，调用一次aTarget的aSelector方法，yesOrNo决定了是否重复执行这个任务
-
-2.通过invalidate方法可以停止定时器的工作，一旦定时器被停止了，就不能再次执行任务。只能再创建一个新的定时器才能执行新的任务
-- (void)invalidate;
-</code></pre><h3 id="解决定时器在主线程不工作的问题"><a href="#解决定时器在主线程不工作的问题" class="headerlink" title="解决定时器在主线程不工作的问题"></a>解决定时器在主线程不工作的问题</h3><pre><code>NSTimer *timer = [NSTimer timerWithTimeInterval:2 target:self selector:@selector(next) userInfo:nil repeats:YES];
-[[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
-</code></pre>
+            
           
         
       
@@ -1046,8 +1126,8 @@ repeats:(BOOL)yesOrNo;
             
               
                 
-                <a class="post-title-link" href="/2016/07/20/iOS/iOSUI基础知识/UIPageControl基础知识/" itemprop="url">
-                  UIPageControl基础知识
+                <a class="post-title-link" href="/2016/07/20/iOS/iOSUI遇到的问题/设置状态栏/" itemprop="url">
+                  设置状态栏
                 </a>
               
             
@@ -1060,7 +1140,7 @@ repeats:(BOOL)yesOrNo;
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-20T19:05:02+08:00" content="2016-07-20">
+            <time itemprop="dateCreated" datetime="2016-07-20T23:13:24+08:00" content="2016-07-20">
               2016-07-20
             </time>
           </span>
@@ -1090,172 +1170,7 @@ repeats:(BOOL)yesOrNo;
       
         
           
-            <p>UIPageControl常用属性如下 </p>
-<pre><code>一共有多少页
-@property(nonatomic) NSInteger numberOfPages;
-当前显示的页码
-@property(nonatomic) NSInteger currentPage; 
-只有一页时，是否需要隐藏页码指示器
-@property(nonatomic) BOOL hidesForSinglePage; 
-其他页码指示器的颜色
-@property(nonatomic,retain) UIColor    *pageIndicatorTintColor;
-当前页码指示器的颜色
-@property(nonatomic,retain) UIColor *currentPageIndicatorTintColor;
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
             
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/19/iOS/iOSUI基础知识/UIScrollView基础知识/" itemprop="url">
-                  UIScrollView基础知识
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-19T20:02:43+08:00" content="2016-07-19">
-              2016-07-19
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="UIScrollView简介"><a href="#UIScrollView简介" class="headerlink" title="UIScrollView简介"></a>UIScrollView简介</h3><pre><code>UIScrollView是一个能够滚动的视图控件，可以用来展示大量的内容，并且可以通过滚动查看所有的内容
-</code></pre><h3 id="UIScrollView的常见属性"><a href="#UIScrollView的常见属性" class="headerlink" title="UIScrollView的常见属性"></a>UIScrollView的常见属性</h3><pre><code>@property(nonatomic) CGPoint contentOffset; 
-这个属性用来表示UIScrollView滚动的位置（其实就是内容左上角与scrollView左上角的间距值）
-
-@property(nonatomic) CGSize contentSize; 
-这个属性用来表示UIScrollView内容的尺寸，滚动范围（能滚多远），如果想禁止某个方向的滚动，那么就可以直接设置width或者height==0
-
-@property(nonatomic) UIEdgeInsets contentInset; 
-这个属性能够在UIScrollView的4周增加额外的滚动区域，一般用来避免scrollView的内容被其他控件挡住
-</code></pre><p><img src="http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView1.png" width="400" align="center">  </p>
-<h3 id="UIScrollView的其他属性"><a href="#UIScrollView的其他属性" class="headerlink" title="UIScrollView的其他属性"></a>UIScrollView的其他属性</h3><pre><code>@property(nonatomic) BOOL bounces;
-设置UIScrollView是否需要弹簧效果
-
-@property(nonatomic,getter=isScrollEnabled) BOOL scrollEnabled; 
-设置UIScrollView是否能滚动
-
-@property(nonatomic) BOOL showsHorizontalScrollIndicator;
-是否显示水平滚动条
-
-@property(nonatomic) BOOL showsVerticalScrollIndicator;
-是否显示垂直滚动条
-</code></pre><h3 id="UIScrollView代理"><a href="#UIScrollView代理" class="headerlink" title="UIScrollView代理"></a>UIScrollView代理</h3><pre><code>1.为什么要有代理
-假如我们想在UIScrollView正在滚动或滚动到某个位置或停止滚动时做一些特定的操作。
-那么我们需要能够监听到UIScrollView的整个滚动过程。
-在iOS中我们是这样实现的：当UIScrollView发生一系列的滚动操作时， 会自动通知它的代理（delegate）对象，给它的代理发送相应的消息，让代理得知它的滚动情况
-2.实现
-UIScrollView:
-在头文件中可以看到，有个属性是delegate(遵守UIScrollViewDelegate协议)
-</code></pre><p>   <img src="http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView2.png" width="400" align="center"> </p>
-<pre><code>delegate:
-遵守UIScrollViewDelegate协议，将自己设置为UIScrollView的代理对象，然后实现协议中相应的方法，就可以监听UIScrollView的滚动过程了
-</code></pre><p>   3.UIScrollView和delegate的通信<br>  <img src=" http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView3.png" width="400" align="center"> </p>
-<h3 id="UIScrollView和控制器"><a href="#UIScrollView和控制器" class="headerlink" title="UIScrollView和控制器"></a>UIScrollView和控制器</h3><pre><code>（一）一般在控制器中使用UIScrollView时，会将控制器作为UIScrollView对象的代理。具体有两种设置方法
-1.代码（self就是控制器）
-self.scrollView.delegate = self
-2.storyboard 拉线
-</code></pre><p>   <img src=" http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView4.png" width="400" align="center"> </p>
-<pre><code>（二）控制器应该遵守UIScrollViewDelegate协议
-</code></pre><p>  <img src=" http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView5.png" width="400" align="center"> </p>
-<pre><code>实现协议中定义的相关方法
-</code></pre><h3 id="UIScrollView的缩放"><a href="#UIScrollView的缩放" class="headerlink" title="UIScrollView的缩放"></a>UIScrollView的缩放</h3><pre><code>1.UIScrollView的缩放原理
-当用户在UIScrollView身上使用捏合手势时，UIScrollView会给代理发送一条消息，询问代理究竟要缩放自己内部的哪一个子控件（哪一块内容）
-即：当用户在UIScrollView身上使用捏合手势时，UIScrollView会调用代理的viewForZoomingInScrollView:方法，这个方法返回的控件就是需要进行缩放的控件
-原理图如下
-</code></pre><p>   <img src=" http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView6.png" width="400" align="center"> </p>
-<pre><code>2.缩放实现步骤
-（1）设置UIScrollView的id&lt;UISCrollViewDelegate&gt; delegate代理对象
-（2）设置minimumZoomScale ：缩小的最小比例
-（3）设置maximumZoomScale ：放大的最大比例
-（4）让代理对象实现下面的方法，返回需要缩放的视图控件
- - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView;
-
-3.跟缩放相关的其他代理方法
-缩放完毕的时候调用 
-- (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view
-正在缩放的时候调用
-- (void)scrollViewDidZoom:(UIScrollView *)scrollView
-</code></pre><h3 id="UIScrollView无法滚动的解决办法"><a href="#UIScrollView无法滚动的解决办法" class="headerlink" title="UIScrollView无法滚动的解决办法"></a>UIScrollView无法滚动的解决办法</h3><pre><code>如果UIScrollView无法滚动，可能是以下原因：
-没有设置contentSize
-scrollEnabled = NO
-没有接收到触摸事件:userInteractionEnabled = NO
-</code></pre>
           
         
       
@@ -1287,7 +1202,7 @@ scrollEnabled = NO
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1328,7 +1243,7 @@ scrollEnabled = NO
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">29</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
