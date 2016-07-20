@@ -84,16 +84,28 @@
 
 
 
-<meta name="description" content="iOS开发，信息安全">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tagcloud">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="什么是Plist文件属性列表文件可以存储NSArray或者NSDictionary之类的数据，
+这种“属性列表文件”的扩展名是plist，因此也称为“plist文件”
+解析Plist文件1.获得Plist文件的全路径
+NSBundle *bundle = [NSBundle mainBundle];
+NSString *path = [bundle pathForResource:@&amp;quot;s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Plist文件使用">
+<meta property="og:url" content="http://yoursite.com/2016/07/19/iOS/iOS数据库/Plist文件使用/index.html">
 <meta property="og:site_name" content="Soverying's Blog">
-<meta property="og:description" content="iOS开发，信息安全">
-<meta property="og:updated_time" content="2016-07-19T08:14:35.000Z">
+<meta property="og:description" content="什么是Plist文件属性列表文件可以存储NSArray或者NSDictionary之类的数据，
+这种“属性列表文件”的扩展名是plist，因此也称为“plist文件”
+解析Plist文件1.获得Plist文件的全路径
+NSBundle *bundle = [NSBundle mainBundle];
+NSString *path = [bundle pathForResource:@&amp;quot;s">
+<meta property="og:updated_time" content="2016-07-19T14:26:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tagcloud">
-<meta name="twitter:description" content="iOS开发，信息安全">
+<meta name="twitter:title" content="Plist文件使用">
+<meta name="twitter:description" content="什么是Plist文件属性列表文件可以存储NSArray或者NSDictionary之类的数据，
+这种“属性列表文件”的扩展名是plist，因此也称为“plist文件”
+解析Plist文件1.获得Plist文件的全路径
+NSBundle *bundle = [NSBundle mainBundle];
+NSString *path = [bundle pathForResource:@&amp;quot;s">
 
 
 
@@ -114,15 +126,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/19/iOS/iOS数据库/Plist文件使用/"/>
 
-  <title>
-  
-
-  
-    标签 | Soverying's Blog
-  
-</title>
+  <title> Plist文件使用 | Soverying's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +149,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -253,16 +259,145 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <div class="tag-cloud">
-        <div class="tag-cloud-title">
-            目前共计 2 个标签
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Plist文件使用
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-19T18:56:12+08:00" content="2016-07-19">
+              2016-07-19
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS开发/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
         </div>
-        <div class="tag-cloud-tags">
-          <a href="/tags/Xcode/" style="font-size: 12px; color: #ccc">Xcode</a> <a href="/tags/插件/" style="font-size: 12px; color: #ccc">插件</a>
-        </div>
-      </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="什么是Plist文件"><a href="#什么是Plist文件" class="headerlink" title="什么是Plist文件"></a>什么是Plist文件</h3><pre><code>属性列表文件可以存储NSArray或者NSDictionary之类的数据，
+这种“属性列表文件”的扩展名是plist，因此也称为“plist文件”
+</code></pre><h3 id="解析Plist文件"><a href="#解析Plist文件" class="headerlink" title="解析Plist文件"></a>解析Plist文件</h3><pre><code>1.获得Plist文件的全路径
+NSBundle *bundle = [NSBundle mainBundle];
+NSString *path = [bundle pathForResource:@&quot;shops&quot; ofType:@&quot;plist&quot;];
+2.加载plist文件
+models = [NSArray arrayWithContentsOfFile:path];
+</code></pre><h3 id="Plist的使用注意"><a href="#Plist的使用注意" class="headerlink" title="Plist的使用注意"></a>Plist的使用注意</h3><pre><code>plist的文件名不能叫做“info”、“Info”之类的，因为project自己有一个配置文件的名为info.plist
+</code></pre><h3 id="使用Plist的优点"><a href="#使用Plist的优点" class="headerlink" title="使用Plist的优点"></a>使用Plist的优点</h3><pre><code>plist文件是存储数据的
+与将数据写在代码里面相比，如果数据经常改，就需要经常翻开对应的代码进行修改，造成代码扩展性低。
+将数据放在文件中进行存储，程序启动后从文件中读取最新的数据。如果变动数据，可以直接修改文件，不需要修改代码。
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/19/iOS/iOSUI基础知识/UIButton-基础知识/" rel="next" title="UIButton 基础知识">
+                <i class="fa fa-chevron-left"></i> UIButton 基础知识
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/19/iOS/iOSUI基础知识/UIButton、UIImageView、UILabel的选择/" rel="prev" title="UIButton、UIImageView、UILabel的选择">
+                UIButton、UIImageView、UILabel的选择 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -294,8 +429,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -374,6 +518,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Plist文件"><span class="nav-number">1.</span> <span class="nav-text">什么是Plist文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析Plist文件"><span class="nav-number">2.</span> <span class="nav-text">解析Plist文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Plist的使用注意"><span class="nav-number">3.</span> <span class="nav-text">Plist的使用注意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Plist的优点"><span class="nav-number">4.</span> <span class="nav-text">使用Plist的优点</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -470,6 +625,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

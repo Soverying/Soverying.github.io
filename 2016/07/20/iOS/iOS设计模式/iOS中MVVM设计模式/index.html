@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="UIView&amp;#x7B80;&amp;#x4ECB;&amp;#x6240;&amp;#x6709;&amp;#x7684;&amp;#x63A7;&amp;#x4EF6;&amp;#x6700;&amp;#x7EC8;&amp;#x90FD;&amp;#x7EE7;&amp;#x627F;&amp;#x81EA;UIView&amp;#xFF08;&amp;#x82F9;&amp;#x679C;&amp;#x5C06;&amp;#x63A7;&amp;#x4EF6;&amp;#x7684;&amp;#x5171;&amp;#x540C;&amp;#x5C5E;&amp;#x6">
+<meta name="description" content="iOS开发，信息安全">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UIView基础知识">
-<meta property="og:url" content="http://yoursite.com/2014/10/12/UIView基础知识/index.html">
+<meta property="og:title" content="iOS中MVVM设计模式">
+<meta property="og:url" content="http://yoursite.com/2016/07/20/iOS/iOS设计模式/iOS中MVVM设计模式/index.html">
 <meta property="og:site_name" content="Soverying's Blog">
-<meta property="og:description" content="UIView&amp;#x7B80;&amp;#x4ECB;&amp;#x6240;&amp;#x6709;&amp;#x7684;&amp;#x63A7;&amp;#x4EF6;&amp;#x6700;&amp;#x7EC8;&amp;#x90FD;&amp;#x7EE7;&amp;#x627F;&amp;#x81EA;UIView&amp;#xFF08;&amp;#x82F9;&amp;#x679C;&amp;#x5C06;&amp;#x63A7;&amp;#x4EF6;&amp;#x7684;&amp;#x5171;&amp;#x540C;&amp;#x5C5E;&amp;#x6">
-<meta property="og:updated_time" content="2016-07-19T11:58:53.000Z">
+<meta property="og:description" content="iOS开发，信息安全">
+<meta property="og:updated_time" content="2016-07-20T14:56:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UIView基础知识">
-<meta name="twitter:description" content="UIView&amp;#x7B80;&amp;#x4ECB;&amp;#x6240;&amp;#x6709;&amp;#x7684;&amp;#x63A7;&amp;#x4EF6;&amp;#x6700;&amp;#x7EC8;&amp;#x90FD;&amp;#x7EE7;&amp;#x627F;&amp;#x81EA;UIView&amp;#xFF08;&amp;#x82F9;&amp;#x679C;&amp;#x5C06;&amp;#x63A7;&amp;#x4EF6;&amp;#x7684;&amp;#x5171;&amp;#x540C;&amp;#x5C5E;&amp;#x6">
+<meta name="twitter:title" content="iOS中MVVM设计模式">
+<meta name="twitter:description" content="iOS开发，信息安全">
 
 
 
@@ -114,9 +114,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2014/10/12/UIView基础知识/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/20/iOS/iOS设计模式/iOS中MVVM设计模式/"/>
 
-  <title> UIView基础知识 | Soverying's Blog </title>
+  <title> iOS中MVVM设计模式 | Soverying's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -266,7 +266,7 @@
             
             
               
-                UIView基础知识
+                iOS中MVVM设计模式
               
             
           </h1>
@@ -278,30 +278,11 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-10-12T18:09:20+08:00" content="2014-10-12">
-              2014-10-12
+            <time itemprop="dateCreated" datetime="2016-07-20T22:56:22+08:00" content="2016-07-20">
+              2016-07-20
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS开发，UI/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS开发，UI</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
@@ -325,40 +306,7 @@
       
 
       
-        <h3 id="UIView&#x7B80;&#x4ECB;"><a href="#UIView&#x7B80;&#x4ECB;" class="headerlink" title="UIView&#x7B80;&#x4ECB;"></a>UIView&#x7B80;&#x4ECB;</h3><p>&#x6240;&#x6709;&#x7684;&#x63A7;&#x4EF6;&#x6700;&#x7EC8;&#x90FD;&#x7EE7;&#x627F;&#x81EA;UIView&#xFF08;&#x82F9;&#x679C;&#x5C06;&#x63A7;&#x4EF6;&#x7684;&#x5171;&#x540C;&#x5C5E;&#x6027;&#x90FD;&#x62BD;&#x53D6;&#x5230;&#x7236;&#x7C7B;UIView&#xFF09;</p>
-<h3 id="UIView&#x5C5E;&#x6027;"><a href="#UIView&#x5C5E;&#x6027;" class="headerlink" title="UIView&#x5C5E;&#x6027;"></a>UIView&#x5C5E;&#x6027;</h3><pre><code>@property(nonatomic) CGRect frame;
-&#x63A7;&#x4EF6;&#x77E9;&#x5F62;&#x6846;&#x5728;&#x7236;&#x63A7;&#x4EF6;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#x548C;&#x5C3A;&#x5BF8;(&#x4EE5;&#x7236;&#x63A7;&#x4EF6;&#x7684;&#x5DE6;&#x4E0A;&#x89D2;&#x4E3A;&#x5750;&#x6807;&#x539F;&#x70B9;)
-@property(nonatomic) CGRect bounds;
-&#x63A7;&#x4EF6;&#x77E9;&#x5F62;&#x6846;&#x7684;&#x4F4D;&#x7F6E;&#x548C;&#x5C3A;&#x5BF8;(&#x4EE5;&#x81EA;&#x5DF1;&#x5DE6;&#x4E0A;&#x89D2;&#x4E3A;&#x5750;&#x6807;&#x539F;&#x70B9;&#xFF0C;&#x6240;&#x4EE5;bounds&#x7684;x&#x3001;y&#x4E00;&#x822C;&#x4E3A;0)
-@property(nonatomic) CGPoint center;
-&#x63A7;&#x4EF6;&#x4E2D;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;(&#x4EE5;&#x7236;&#x63A7;&#x4EF6;&#x7684;&#x5DE6;&#x4E0A;&#x89D2;&#x4E3A;&#x5750;&#x6807;&#x539F;&#x70B9;)
-
-@property(nonatomic,readonly) UIView *superview;
-&#x83B7;&#x5F97;&#x81EA;&#x5DF1;&#x7684;&#x7236;&#x63A7;&#x4EF6;&#x5BF9;&#x8C61;
-@property(nonatomic,readonly,copy) NSArray *subviews;
-&#x83B7;&#x5F97;&#x81EA;&#x5DF1;&#x7684;&#x6240;&#x6709;&#x5B50;&#x63A7;&#x4EF6;&#x5BF9;&#x8C61;
-&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x7684;&#x987A;&#x5E8F;&#x51B3;&#x5B9A;&#x7740;&#x5B50;&#x63A7;&#x4EF6;&#x7684;&#x663E;&#x793A;&#x5C42;&#x7EA7;&#x987A;&#x5E8F;&#xFF08;&#x4E0B;&#x6807;&#x8D8A;&#x5927;&#x7684;&#xFF0C;&#x8D8A;&#x663E;&#x793A;&#x5728;&#x4E0A;&#x9762;)
-
-@property(nonatomic) NSInteger tag;
-&#x63A7;&#x4EF6;&#x7684;ID(&#x6807;&#x8BC6;)&#xFF0C;&#x7236;&#x63A7;&#x4EF6;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;tag&#x6765;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x5B50;&#x63A7;&#x4EF6;                
-@property(nonatomic) CGAffineTransform transform;
-&#x63A7;&#x4EF6;&#x7684;&#x5F62;&#x53D8;&#x5C5E;&#x6027;(&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#x3001;&#x6BD4;&#x4F8B;&#x7F29;&#x653E;&#x3001;&#x5E73;&#x79FB;&#x7B49;&#x5C5E;&#x6027;)
-</code></pre><h4 id="UIView&#x7684;&#x5E38;&#x89C1;&#x65B9;&#x6CD5;"><a href="#UIView&#x7684;&#x5E38;&#x89C1;&#x65B9;&#x6CD5;" class="headerlink" title="UIView&#x7684;&#x5E38;&#x89C1;&#x65B9;&#x6CD5;"></a>UIView&#x7684;&#x5E38;&#x89C1;&#x65B9;&#x6CD5;</h4><pre><code>addSubview:
-&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x5B50;&#x63A7;&#x4EF6;
-&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x6DFB;&#x52A0;&#x7684;&#x5B50;&#x63A7;&#x4EF6;&#x4F1A;&#x88AB;&#x585E;&#x5230;subviews&#x6570;&#x7EC4;&#x7684;&#x6700;&#x540E;&#x9762;
-
-&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x65B9;&#x6CD5;&#x8C03;&#x6574;&#x5B50;&#x63A7;&#x4EF6;&#x5728;subview&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x987A;&#x5E8F;
-// &#x5C06;&#x5B50;&#x63A7;&#x4EF6;view&#x63D2;&#x5165;&#x5230;subviews&#x6570;&#x7EC4;&#x7684;index&#x4F4D;&#x7F6E;
-- (void)insertSubview:(UIView *)view atIndex:(NSInteger)index;
-// &#x5C06;&#x5B50;&#x63A7;&#x4EF6;view&#x663E;&#x793A;&#x5230;&#x5B50;&#x63A7;&#x4EF6;siblingSubview&#x7684;&#x4E0B;&#x9762;
-- (void)insertSubview:(UIView *)view belowSubview:(UIView *)siblingSubview;
-// &#x5C06;&#x5B50;&#x63A7;&#x4EF6;view&#x663E;&#x793A;&#x5230;&#x5B50;&#x63A7;&#x4EF6;siblingSubview&#x7684;&#x4E0A;&#x9762;
-- (void)insertSubview:(UIView *)view aboveSubview:(UIView *)siblingSubview;
-// &#x5C06;&#x5B50;&#x63A7;&#x4EF6;view&#x653E;&#x5230;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x540E;&#x9762;&#xFF0C;&#x663E;&#x793A;&#x5728;&#x6700;&#x4E0A;&#x9762;
-- (void)bringSubviewToFront:(UIView *)view;
-// &#x5C06;&#x5B50;&#x63A7;&#x4EF6;view&#x653E;&#x5230;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x524D;&#x9762;&#xFF0C;&#x663E;&#x793A;&#x5728;&#x6700;&#x4E0B;&#x9762;
-- (void)sendSubviewToBack:(UIView *)view;
-</code></pre>
+        
       
     </div>
 
@@ -382,13 +330,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/07/20/iOS/iOS设计模式/iOS中MVP设计模式/" rel="next" title="iOS中MVP设计模式">
+                <i class="fa fa-chevron-left"></i> iOS中MVP设计模式
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/19/UIButton-基础知识/" rel="prev" title="UIButton 基础知识">
-                UIButton 基础知识 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -456,7 +404,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -531,7 +479,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#UIView简介"><span class="nav-number">1.</span> <span class="nav-text">UIView简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIView属性"><span class="nav-number">2.</span> <span class="nav-text">UIView属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#UIView的常见方法"><span class="nav-number">2.1.</span> <span class="nav-text">UIView的常见方法</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>

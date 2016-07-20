@@ -84,22 +84,31 @@
 
 
 
-<meta name="description" content="UIButton&amp;#x7684;&amp;#x72B6;&amp;#x6001;1.normal&amp;#xFF08;&amp;#x666E;&amp;#x901A;&amp;#x72B6;&amp;#x6001;&amp;#xFF09;
-&amp;#x9ED8;&amp;#x8BA4;&amp;#x60C5;&amp;#x51B5;&amp;#xFF08;Default&amp;#xFF09;
-&amp;#x5BF9;&amp;#x5E94;&amp;#x7684;&amp;#x679A;&amp;#x4E3E;&amp;#x5E38;&amp;#x91CF">
+<meta name="description" content="NSTimer 作用在指定的时间执行指定的任务
+每隔一段时间执行指定的任务
+NSTimer 方法 1.调用下面的方法就会开启一个定时任务
++ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)ti         target:(id)aTarget 
+selector:(SEL)aSelector 
+userInfo:(id)us">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UIButton 基础知识">
-<meta property="og:url" content="http://yoursite.com/2016/07/19/UIButton-基础知识/index.html">
+<meta property="og:title" content="NSTimer基础知识">
+<meta property="og:url" content="http://yoursite.com/2016/07/20/iOS/iOS多线程/NSTimer基础知识/index.html">
 <meta property="og:site_name" content="Soverying's Blog">
-<meta property="og:description" content="UIButton&amp;#x7684;&amp;#x72B6;&amp;#x6001;1.normal&amp;#xFF08;&amp;#x666E;&amp;#x901A;&amp;#x72B6;&amp;#x6001;&amp;#xFF09;
-&amp;#x9ED8;&amp;#x8BA4;&amp;#x60C5;&amp;#x51B5;&amp;#xFF08;Default&amp;#xFF09;
-&amp;#x5BF9;&amp;#x5E94;&amp;#x7684;&amp;#x679A;&amp;#x4E3E;&amp;#x5E38;&amp;#x91CF">
-<meta property="og:updated_time" content="2016-07-19T14:27:03.000Z">
+<meta property="og:description" content="NSTimer 作用在指定的时间执行指定的任务
+每隔一段时间执行指定的任务
+NSTimer 方法 1.调用下面的方法就会开启一个定时任务
++ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)ti         target:(id)aTarget 
+selector:(SEL)aSelector 
+userInfo:(id)us">
+<meta property="og:updated_time" content="2016-07-20T13:14:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UIButton 基础知识">
-<meta name="twitter:description" content="UIButton&amp;#x7684;&amp;#x72B6;&amp;#x6001;1.normal&amp;#xFF08;&amp;#x666E;&amp;#x901A;&amp;#x72B6;&amp;#x6001;&amp;#xFF09;
-&amp;#x9ED8;&amp;#x8BA4;&amp;#x60C5;&amp;#x51B5;&amp;#xFF08;Default&amp;#xFF09;
-&amp;#x5BF9;&amp;#x5E94;&amp;#x7684;&amp;#x679A;&amp;#x4E3E;&amp;#x5E38;&amp;#x91CF">
+<meta name="twitter:title" content="NSTimer基础知识">
+<meta name="twitter:description" content="NSTimer 作用在指定的时间执行指定的任务
+每隔一段时间执行指定的任务
+NSTimer 方法 1.调用下面的方法就会开启一个定时任务
++ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)ti         target:(id)aTarget 
+selector:(SEL)aSelector 
+userInfo:(id)us">
 
 
 
@@ -120,9 +129,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/07/19/UIButton-基础知识/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/20/iOS/iOS多线程/NSTimer基础知识/"/>
 
-  <title> UIButton 基础知识 | Soverying's Blog </title>
+  <title> NSTimer基础知识 | Soverying's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -272,7 +281,7 @@
             
             
               
-                UIButton 基础知识
+                NSTimer基础知识
               
             
           </h1>
@@ -284,30 +293,11 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-19T18:18:14+08:00" content="2016-07-19">
-              2016-07-19
+            <time itemprop="dateCreated" datetime="2016-07-20T21:06:39+08:00" content="2016-07-20">
+              2016-07-20
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS开发，UI/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS开发，UI</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
@@ -331,42 +321,19 @@
       
 
       
-        <h3 id="UIButton&#x7684;&#x72B6;&#x6001;"><a href="#UIButton&#x7684;&#x72B6;&#x6001;" class="headerlink" title="UIButton&#x7684;&#x72B6;&#x6001;"></a>UIButton&#x7684;&#x72B6;&#x6001;</h3><pre><code>1.normal&#xFF08;&#x666E;&#x901A;&#x72B6;&#x6001;&#xFF09;
-&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#xFF08;Default&#xFF09;
-&#x5BF9;&#x5E94;&#x7684;&#x679A;&#x4E3E;&#x5E38;&#x91CF;&#xFF1A;UIControlStateNormal
-2.highlighted&#xFF08;&#x9AD8;&#x4EAE;&#x72B6;&#x6001;&#xFF09;
-&#x6309;&#x94AE;&#x88AB;&#x6309;&#x4E0B;&#x53BB;&#x7684;&#x65F6;&#x5019;&#xFF08;&#x624B;&#x6307;&#x8FD8;&#x672A;&#x677E;&#x5F00;&#xFF09;
-&#x5BF9;&#x5E94;&#x7684;&#x679A;&#x4E3E;&#x5E38;&#x91CF;&#xFF1A;UIControlStateHighlighted
-3.disabled(&#x5931;&#x6548;&#x72B6;&#x6001;&#xFF0C;&#x4E0D;&#x53EF;&#x7528;&#x72B6;&#x6001;&#xFF09;
-&#x5982;&#x679C;enabled&#x5C5E;&#x6027;&#x4E3A;NO&#xFF0C;&#x5C31;&#x662F;&#x5904;&#x4E8E;disable&#x72B6;&#x6001;&#xFF0C;&#x4EE3;&#x8868;&#x6309;&#x94AE;&#x4E0D;&#x53EF;&#x4EE5;&#x88AB;&#x70B9;&#x51FB;
-&#x5BF9;&#x5E94;&#x7684;&#x679A;&#x4E3E;&#x5E38;&#x91CF;&#xFF1A;UIControlStateDisabled
-</code></pre><h3 id="UIButton&#x7684;&#x6837;&#x5F0F;"><a href="#UIButton&#x7684;&#x6837;&#x5F0F;" class="headerlink" title="UIButton&#x7684;&#x6837;&#x5F0F;"></a>UIButton&#x7684;&#x6837;&#x5F0F;</h3><pre><code>&#x5728;&#x7528;&#x4EE3;&#x7801;&#x521B;&#x5EFA;&#x6309;&#x94AE;&#x7684;&#x540C;&#x65F6;&#x6307;&#x5B9A;&#x6309;&#x94AE;&#x6837;&#x5F0F;
-UIButton *btn = [UIButton  buttonWithType:UIButtonTypeCustom]; 
-UIButtonTypeCustom&#xFF1A;&#x65E0;&#x7C7B;&#x578B;&#xFF0C;&#x6309;&#x94AE;&#x7684;&#x5185;&#x5BB9;&#x9700;&#x8981;&#x81EA;&#x5B9A;&#x4E49;
-UIButtonTypeDetailDisclosure&#xFF1A; 
-UIButtonTypeInfoLight&#xFF1A; 
-UIButtonTypeInfoDark&#xFF1A; 
-UIButtonTypeContactAdd
-</code></pre><p>&#x6CE8;&#xFF1A;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x9AD8;&#x4EAE;&#x72B6;&#x6001;&#x4E0B;&#x7684;&#x56FE;&#x7247;&#x6B63;&#x5E38;&#x663E;&#x793A;&#xFF0C;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x7684;type&#x4E3A;custom</p>
-<h3 id="UIButton&#x7684;&#x5E38;&#x89C1;&#x8BBE;&#x7F6E;"><a href="#UIButton&#x7684;&#x5E38;&#x89C1;&#x8BBE;&#x7F6E;" class="headerlink" title="UIButton&#x7684;&#x5E38;&#x89C1;&#x8BBE;&#x7F6E;"></a>UIButton&#x7684;&#x5E38;&#x89C1;&#x8BBE;&#x7F6E;</h3><pre><code>&#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;
-- (void)setTitle:(NSString *)title forState:(UIControlState)state;
-&#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;&#x989C;&#x8272;
-- (void)setTitleColor:(UIColor *)color forState:(UIControlState)state;
-&#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x5185;&#x90E8;&#x7684;&#x5C0F;&#x56FE;&#x7247;
-- (void)setImage:(UIImage *)image forState:(UIControlState)state; 
-&#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x7684;&#x80CC;&#x666F;&#x56FE;&#x7247;
-- (void)setBackgroundImage:(UIImage *)image forState:(UIControlState)state;
+        <h3 id="NSTimer-作用"><a href="#NSTimer-作用" class="headerlink" title="NSTimer 作用"></a>NSTimer 作用</h3><pre><code>在指定的时间执行指定的任务
+每隔一段时间执行指定的任务
+</code></pre><h3 id="NSTimer-方法"><a href="#NSTimer-方法" class="headerlink" title="NSTimer 方法"></a>NSTimer 方法</h3><pre><code> 1.调用下面的方法就会开启一个定时任务
++ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)ti         target:(id)aTarget 
+selector:(SEL)aSelector 
+userInfo:(id)userInfo 
+repeats:(BOOL)yesOrNo;
+每隔ti秒，调用一次aTarget的aSelector方法，yesOrNo决定了是否重复执行这个任务
 
-&#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;&#x5B57;&#x4F53;&#xFF08;&#x9700;&#x8981;&#x62FF;&#x5230;&#x6309;&#x94AE;&#x5185;&#x90E8;&#x7684;label&#x6765;&#x8BBE;&#x7F6E;&#xFF09;
-btn.titleLabel.font = [UIFont systemFontOfSize:13];
-&#x83B7;&#x5F97;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;
-- (NSString *)titleForState:(UIControlState)state; 
-&#x83B7;&#x5F97;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;&#x989C;&#x8272;
-- (UIColor *)titleColorForState:(UIControlState)state;
-&#x83B7;&#x5F97;&#x6309;&#x94AE;&#x5185;&#x90E8;&#x7684;&#x5C0F;&#x56FE;&#x7247;
-- (UIImage *)imageForState:(UIControlState)state;
-&#x83B7;&#x5F97;&#x6309;&#x94AE;&#x7684;&#x80CC;&#x666F;&#x56FE;&#x7247;
-- (UIImage *)backgroundImageForState:(UIControlState)state;
+2.通过invalidate方法可以停止定时器的工作，一旦定时器被停止了，就不能再次执行任务。只能再创建一个新的定时器才能执行新的任务
+- (void)invalidate;
+</code></pre><h3 id="解决定时器在主线程不工作的问题"><a href="#解决定时器在主线程不工作的问题" class="headerlink" title="解决定时器在主线程不工作的问题"></a>解决定时器在主线程不工作的问题</h3><pre><code>NSTimer *timer = [NSTimer timerWithTimeInterval:2 target:self selector:@selector(next) userInfo:nil repeats:YES];
+[[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 </code></pre>
       
     </div>
@@ -391,16 +358,16 @@ btn.titleLabel.font = [UIFont systemFontOfSize:13];
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/10/12/UIView基础知识/" rel="next" title="UIView基础知识">
-                <i class="fa fa-chevron-left"></i> UIView基础知识
+              <a href="/2016/07/20/iOS/iOSUI基础知识/UIPageControl基础知识/" rel="next" title="UIPageControl基础知识">
+                <i class="fa fa-chevron-left"></i> UIPageControl基础知识
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/19/Plist文件使用/" rel="prev" title="Plist文件使用">
-                Plist文件使用 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/20/iOS/iOSUI基础知识/UITableView基础知识/" rel="prev" title="UITableView基础知识">
+                UITableView基础知识 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -469,7 +436,7 @@ btn.titleLabel.font = [UIFont systemFontOfSize:13];
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -544,7 +511,7 @@ btn.titleLabel.font = [UIFont systemFontOfSize:13];
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#UIButton的状态"><span class="nav-number">1.</span> <span class="nav-text">UIButton的状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIButton的样式"><span class="nav-number">2.</span> <span class="nav-text">UIButton的样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIButton的常见设置"><span class="nav-number">3.</span> <span class="nav-text">UIButton的常见设置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#NSTimer-作用"><span class="nav-number">1.</span> <span class="nav-text">NSTimer 作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NSTimer-方法"><span class="nav-number">2.</span> <span class="nav-text">NSTimer 方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决定时器在主线程不工作的问题"><span class="nav-number">3.</span> <span class="nav-text">解决定时器在主线程不工作的问题</span></a></li></ol></div>
             
           </div>
         </section>

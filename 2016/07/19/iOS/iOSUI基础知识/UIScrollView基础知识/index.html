@@ -84,22 +84,34 @@
 
 
 
-<meta name="description" content="UIScrollView&amp;#x7B80;&amp;#x4ECB;UIScrollView&amp;#x662F;&amp;#x4E00;&amp;#x4E2A;&amp;#x80FD;&amp;#x591F;&amp;#x6EDA;&amp;#x52A8;&amp;#x7684;&amp;#x89C6;&amp;#x56FE;&amp;#x63A7;&amp;#x4EF6;&amp;#xFF0C;&amp;#x53EF;&amp;#x4EE5;&amp;#x7528;&amp;#x6765;&amp;#x5C55;&amp;#x793A;&amp;#x5927;">
+<meta name="description" content="UIScrollView简介UIScrollView是一个能够滚动的视图控件，可以用来展示大量的内容，并且可以通过滚动查看所有的内容
+UIScrollView的常见属性@property(nonatomic) CGPoint contentOffset; 
+这个属性用来表示UIScrollView滚动的位置（其实就是内容左上角与scrollView左上角的间距值）
+
+@property(nonat">
 <meta property="og:type" content="article">
 <meta property="og:title" content="UIScrollView基础知识">
-<meta property="og:url" content="http://yoursite.com/2016/07/19/UIScrollView基础知识/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/07/19/iOS/iOSUI基础知识/UIScrollView基础知识/index.html">
 <meta property="og:site_name" content="Soverying's Blog">
-<meta property="og:description" content="UIScrollView&amp;#x7B80;&amp;#x4ECB;UIScrollView&amp;#x662F;&amp;#x4E00;&amp;#x4E2A;&amp;#x80FD;&amp;#x591F;&amp;#x6EDA;&amp;#x52A8;&amp;#x7684;&amp;#x89C6;&amp;#x56FE;&amp;#x63A7;&amp;#x4EF6;&amp;#xFF0C;&amp;#x53EF;&amp;#x4EE5;&amp;#x7528;&amp;#x6765;&amp;#x5C55;&amp;#x793A;&amp;#x5927;">
+<meta property="og:description" content="UIScrollView简介UIScrollView是一个能够滚动的视图控件，可以用来展示大量的内容，并且可以通过滚动查看所有的内容
+UIScrollView的常见属性@property(nonatomic) CGPoint contentOffset; 
+这个属性用来表示UIScrollView滚动的位置（其实就是内容左上角与scrollView左上角的间距值）
+
+@property(nonat">
 <meta property="og:image" content="http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView1.png">
 <meta property="og:image" content="http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView2.png">
 <meta property="og:image" content=" http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView3.png">
 <meta property="og:image" content=" http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView4.png">
 <meta property="og:image" content=" http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView5.png">
 <meta property="og:image" content=" http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView6.png">
-<meta property="og:updated_time" content="2016-07-20T05:32:12.000Z">
+<meta property="og:updated_time" content="2016-07-20T13:28:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UIScrollView基础知识">
-<meta name="twitter:description" content="UIScrollView&amp;#x7B80;&amp;#x4ECB;UIScrollView&amp;#x662F;&amp;#x4E00;&amp;#x4E2A;&amp;#x80FD;&amp;#x591F;&amp;#x6EDA;&amp;#x52A8;&amp;#x7684;&amp;#x89C6;&amp;#x56FE;&amp;#x63A7;&amp;#x4EF6;&amp;#xFF0C;&amp;#x53EF;&amp;#x4EE5;&amp;#x7528;&amp;#x6765;&amp;#x5C55;&amp;#x793A;&amp;#x5927;">
+<meta name="twitter:description" content="UIScrollView简介UIScrollView是一个能够滚动的视图控件，可以用来展示大量的内容，并且可以通过滚动查看所有的内容
+UIScrollView的常见属性@property(nonatomic) CGPoint contentOffset; 
+这个属性用来表示UIScrollView滚动的位置（其实就是内容左上角与scrollView左上角的间距值）
+
+@property(nonat">
 <meta name="twitter:image" content="http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView1.png">
 
 
@@ -121,7 +133,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/07/19/UIScrollView基础知识/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/19/iOS/iOSUI基础知识/UIScrollView基础知识/"/>
 
   <title> UIScrollView基础知识 | Soverying's Blog </title>
 </head>
@@ -313,63 +325,67 @@
       
 
       
-        <h3 id="UIScrollView&#x7B80;&#x4ECB;"><a href="#UIScrollView&#x7B80;&#x4ECB;" class="headerlink" title="UIScrollView&#x7B80;&#x4ECB;"></a>UIScrollView&#x7B80;&#x4ECB;</h3><pre><code>UIScrollView&#x662F;&#x4E00;&#x4E2A;&#x80FD;&#x591F;&#x6EDA;&#x52A8;&#x7684;&#x89C6;&#x56FE;&#x63A7;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5C55;&#x793A;&#x5927;&#x91CF;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6EDA;&#x52A8;&#x67E5;&#x770B;&#x6240;&#x6709;&#x7684;&#x5185;&#x5BB9;
-</code></pre><h3 id="UIScrollView&#x7684;&#x5E38;&#x89C1;&#x5C5E;&#x6027;"><a href="#UIScrollView&#x7684;&#x5E38;&#x89C1;&#x5C5E;&#x6027;" class="headerlink" title="UIScrollView&#x7684;&#x5E38;&#x89C1;&#x5C5E;&#x6027;"></a>UIScrollView&#x7684;&#x5E38;&#x89C1;&#x5C5E;&#x6027;</h3><pre><code>@property(nonatomic) CGPoint contentOffset; 
-&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x7528;&#x6765;&#x8868;&#x793A;UIScrollView&#x6EDA;&#x52A8;&#x7684;&#x4F4D;&#x7F6E;&#xFF08;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x5185;&#x5BB9;&#x5DE6;&#x4E0A;&#x89D2;&#x4E0E;scrollView&#x5DE6;&#x4E0A;&#x89D2;&#x7684;&#x95F4;&#x8DDD;&#x503C;&#xFF09;
+        <h3 id="UIScrollView简介"><a href="#UIScrollView简介" class="headerlink" title="UIScrollView简介"></a>UIScrollView简介</h3><pre><code>UIScrollView是一个能够滚动的视图控件，可以用来展示大量的内容，并且可以通过滚动查看所有的内容
+</code></pre><h3 id="UIScrollView的常见属性"><a href="#UIScrollView的常见属性" class="headerlink" title="UIScrollView的常见属性"></a>UIScrollView的常见属性</h3><pre><code>@property(nonatomic) CGPoint contentOffset; 
+这个属性用来表示UIScrollView滚动的位置（其实就是内容左上角与scrollView左上角的间距值）
 
 @property(nonatomic) CGSize contentSize; 
-&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x7528;&#x6765;&#x8868;&#x793A;UIScrollView&#x5185;&#x5BB9;&#x7684;&#x5C3A;&#x5BF8;&#xFF0C;&#x6EDA;&#x52A8;&#x8303;&#x56F4;&#xFF08;&#x80FD;&#x6EDA;&#x591A;&#x8FDC;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x7981;&#x6B62;&#x67D0;&#x4E2A;&#x65B9;&#x5411;&#x7684;&#x6EDA;&#x52A8;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8BBE;&#x7F6E;width&#x6216;&#x8005;height==0
+这个属性用来表示UIScrollView内容的尺寸，滚动范围（能滚多远），如果想禁止某个方向的滚动，那么就可以直接设置width或者height==0
 
 @property(nonatomic) UIEdgeInsets contentInset; 
-&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x80FD;&#x591F;&#x5728;UIScrollView&#x7684;4&#x5468;&#x589E;&#x52A0;&#x989D;&#x5916;&#x7684;&#x6EDA;&#x52A8;&#x533A;&#x57DF;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x6765;&#x907F;&#x514D;scrollView&#x7684;&#x5185;&#x5BB9;&#x88AB;&#x5176;&#x4ED6;&#x63A7;&#x4EF6;&#x6321;&#x4F4F;
+这个属性能够在UIScrollView的4周增加额外的滚动区域，一般用来避免scrollView的内容被其他控件挡住
 </code></pre><p><img src="http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView1.png" width="400" align="center">  </p>
-<h3 id="UIScrollView&#x7684;&#x5176;&#x4ED6;&#x5C5E;&#x6027;"><a href="#UIScrollView&#x7684;&#x5176;&#x4ED6;&#x5C5E;&#x6027;" class="headerlink" title="UIScrollView&#x7684;&#x5176;&#x4ED6;&#x5C5E;&#x6027;"></a>UIScrollView&#x7684;&#x5176;&#x4ED6;&#x5C5E;&#x6027;</h3><pre><code>@property(nonatomic) BOOL bounces;
-&#x8BBE;&#x7F6E;UIScrollView&#x662F;&#x5426;&#x9700;&#x8981;&#x5F39;&#x7C27;&#x6548;&#x679C;
+<h3 id="UIScrollView的其他属性"><a href="#UIScrollView的其他属性" class="headerlink" title="UIScrollView的其他属性"></a>UIScrollView的其他属性</h3><pre><code>@property(nonatomic) BOOL bounces;
+设置UIScrollView是否需要弹簧效果
 
 @property(nonatomic,getter=isScrollEnabled) BOOL scrollEnabled; 
-&#x8BBE;&#x7F6E;UIScrollView&#x662F;&#x5426;&#x80FD;&#x6EDA;&#x52A8;
+设置UIScrollView是否能滚动
 
 @property(nonatomic) BOOL showsHorizontalScrollIndicator;
-&#x662F;&#x5426;&#x663E;&#x793A;&#x6C34;&#x5E73;&#x6EDA;&#x52A8;&#x6761;
+是否显示水平滚动条
 
 @property(nonatomic) BOOL showsVerticalScrollIndicator;
-&#x662F;&#x5426;&#x663E;&#x793A;&#x5782;&#x76F4;&#x6EDA;&#x52A8;&#x6761;
-</code></pre><h3 id="UIScrollView&#x4EE3;&#x7406;"><a href="#UIScrollView&#x4EE3;&#x7406;" class="headerlink" title="UIScrollView&#x4EE3;&#x7406;"></a>UIScrollView&#x4EE3;&#x7406;</h3><pre><code>1.&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x6709;&#x4EE3;&#x7406;
-&#x5047;&#x5982;&#x6211;&#x4EEC;&#x60F3;&#x5728;UIScrollView&#x6B63;&#x5728;&#x6EDA;&#x52A8;&#x6216;&#x6EDA;&#x52A8;&#x5230;&#x67D0;&#x4E2A;&#x4F4D;&#x7F6E;&#x6216;&#x505C;&#x6B62;&#x6EDA;&#x52A8;&#x65F6;&#x505A;&#x4E00;&#x4E9B;&#x7279;&#x5B9A;&#x7684;&#x64CD;&#x4F5C;&#x3002;
-&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x80FD;&#x591F;&#x76D1;&#x542C;&#x5230;UIScrollView&#x7684;&#x6574;&#x4E2A;&#x6EDA;&#x52A8;&#x8FC7;&#x7A0B;&#x3002;
-&#x5728;iOS&#x4E2D;&#x6211;&#x4EEC;&#x662F;&#x8FD9;&#x6837;&#x5B9E;&#x73B0;&#x7684;&#xFF1A;&#x5F53;UIScrollView&#x53D1;&#x751F;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x6EDA;&#x52A8;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C; &#x4F1A;&#x81EA;&#x52A8;&#x901A;&#x77E5;&#x5B83;&#x7684;&#x4EE3;&#x7406;&#xFF08;delegate&#xFF09;&#x5BF9;&#x8C61;&#xFF0C;&#x7ED9;&#x5B83;&#x7684;&#x4EE3;&#x7406;&#x53D1;&#x9001;&#x76F8;&#x5E94;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x8BA9;&#x4EE3;&#x7406;&#x5F97;&#x77E5;&#x5B83;&#x7684;&#x6EDA;&#x52A8;&#x60C5;&#x51B5;
-2.&#x5B9E;&#x73B0;
+是否显示垂直滚动条
+</code></pre><h3 id="UIScrollView代理"><a href="#UIScrollView代理" class="headerlink" title="UIScrollView代理"></a>UIScrollView代理</h3><pre><code>1.为什么要有代理
+假如我们想在UIScrollView正在滚动或滚动到某个位置或停止滚动时做一些特定的操作。
+那么我们需要能够监听到UIScrollView的整个滚动过程。
+在iOS中我们是这样实现的：当UIScrollView发生一系列的滚动操作时， 会自动通知它的代理（delegate）对象，给它的代理发送相应的消息，让代理得知它的滚动情况
+2.实现
 UIScrollView:
-&#x5728;&#x5934;&#x6587;&#x4EF6;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x6709;&#x4E2A;&#x5C5E;&#x6027;&#x662F;delegate(&#x9075;&#x5B88;UIScrollViewDelegate&#x534F;&#x8BAE;)
+在头文件中可以看到，有个属性是delegate(遵守UIScrollViewDelegate协议)
 </code></pre><p>   <img src="http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView2.png" width="400" align="center"> </p>
 <pre><code>delegate:
-&#x9075;&#x5B88;UIScrollViewDelegate&#x534F;&#x8BAE;&#xFF0C;&#x5C06;&#x81EA;&#x5DF1;&#x8BBE;&#x7F6E;&#x4E3A;UIScrollView&#x7684;&#x4EE3;&#x7406;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x5B9E;&#x73B0;&#x534F;&#x8BAE;&#x4E2D;&#x76F8;&#x5E94;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x76D1;&#x542C;UIScrollView&#x7684;&#x6EDA;&#x52A8;&#x8FC7;&#x7A0B;&#x4E86;
-</code></pre><p>   3.UIScrollView&#x548C;delegate&#x7684;&#x901A;&#x4FE1;<br>  <img src=" http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView3.png" width="400" align="center"> </p>
-<h3 id="UIScrollView&#x548C;&#x63A7;&#x5236;&#x5668;"><a href="#UIScrollView&#x548C;&#x63A7;&#x5236;&#x5668;" class="headerlink" title="UIScrollView&#x548C;&#x63A7;&#x5236;&#x5668;"></a>UIScrollView&#x548C;&#x63A7;&#x5236;&#x5668;</h3><pre><code>&#xFF08;&#x4E00;&#xFF09;&#x4E00;&#x822C;&#x5728;&#x63A7;&#x5236;&#x5668;&#x4E2D;&#x4F7F;&#x7528;UIScrollView&#x65F6;&#xFF0C;&#x4F1A;&#x5C06;&#x63A7;&#x5236;&#x5668;&#x4F5C;&#x4E3A;UIScrollView&#x5BF9;&#x8C61;&#x7684;&#x4EE3;&#x7406;&#x3002;&#x5177;&#x4F53;&#x6709;&#x4E24;&#x79CD;&#x8BBE;&#x7F6E;&#x65B9;&#x6CD5;
-1.&#x4EE3;&#x7801;&#xFF08;self&#x5C31;&#x662F;&#x63A7;&#x5236;&#x5668;&#xFF09;
+遵守UIScrollViewDelegate协议，将自己设置为UIScrollView的代理对象，然后实现协议中相应的方法，就可以监听UIScrollView的滚动过程了
+</code></pre><p>   3.UIScrollView和delegate的通信<br>  <img src=" http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView3.png" width="400" align="center"> </p>
+<h3 id="UIScrollView和控制器"><a href="#UIScrollView和控制器" class="headerlink" title="UIScrollView和控制器"></a>UIScrollView和控制器</h3><pre><code>（一）一般在控制器中使用UIScrollView时，会将控制器作为UIScrollView对象的代理。具体有两种设置方法
+1.代码（self就是控制器）
 self.scrollView.delegate = self
-2.storyboard &#x62C9;&#x7EBF;
+2.storyboard 拉线
 </code></pre><p>   <img src=" http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView4.png" width="400" align="center"> </p>
-<pre><code>&#xFF08;&#x4E8C;&#xFF09;&#x63A7;&#x5236;&#x5668;&#x5E94;&#x8BE5;&#x9075;&#x5B88;UIScrollViewDelegate&#x534F;&#x8BAE;
+<pre><code>（二）控制器应该遵守UIScrollViewDelegate协议
 </code></pre><p>  <img src=" http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView5.png" width="400" align="center"> </p>
-<pre><code>&#x5B9E;&#x73B0;&#x534F;&#x8BAE;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x76F8;&#x5173;&#x65B9;&#x6CD5;
-</code></pre><h3 id="UIScrollView&#x7684;&#x7F29;&#x653E;"><a href="#UIScrollView&#x7684;&#x7F29;&#x653E;" class="headerlink" title="UIScrollView&#x7684;&#x7F29;&#x653E;"></a>UIScrollView&#x7684;&#x7F29;&#x653E;</h3><pre><code>1.UIScrollView&#x7684;&#x7F29;&#x653E;&#x539F;&#x7406;
-&#x5F53;&#x7528;&#x6237;&#x5728;UIScrollView&#x8EAB;&#x4E0A;&#x4F7F;&#x7528;&#x634F;&#x5408;&#x624B;&#x52BF;&#x65F6;&#xFF0C;UIScrollView&#x4F1A;&#x7ED9;&#x4EE3;&#x7406;&#x53D1;&#x9001;&#x4E00;&#x6761;&#x6D88;&#x606F;&#xFF0C;&#x8BE2;&#x95EE;&#x4EE3;&#x7406;&#x7A76;&#x7ADF;&#x8981;&#x7F29;&#x653E;&#x81EA;&#x5DF1;&#x5185;&#x90E8;&#x7684;&#x54EA;&#x4E00;&#x4E2A;&#x5B50;&#x63A7;&#x4EF6;&#xFF08;&#x54EA;&#x4E00;&#x5757;&#x5185;&#x5BB9;&#xFF09;
-&#x5373;&#xFF1A;&#x5F53;&#x7528;&#x6237;&#x5728;UIScrollView&#x8EAB;&#x4E0A;&#x4F7F;&#x7528;&#x634F;&#x5408;&#x624B;&#x52BF;&#x65F6;&#xFF0C;UIScrollView&#x4F1A;&#x8C03;&#x7528;&#x4EE3;&#x7406;&#x7684;viewForZoomingInScrollView:&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x7684;&#x63A7;&#x4EF6;&#x5C31;&#x662F;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x7F29;&#x653E;&#x7684;&#x63A7;&#x4EF6;
-&#x539F;&#x7406;&#x56FE;&#x5982;&#x4E0B;
+<pre><code>实现协议中定义的相关方法
+</code></pre><h3 id="UIScrollView的缩放"><a href="#UIScrollView的缩放" class="headerlink" title="UIScrollView的缩放"></a>UIScrollView的缩放</h3><pre><code>1.UIScrollView的缩放原理
+当用户在UIScrollView身上使用捏合手势时，UIScrollView会给代理发送一条消息，询问代理究竟要缩放自己内部的哪一个子控件（哪一块内容）
+即：当用户在UIScrollView身上使用捏合手势时，UIScrollView会调用代理的viewForZoomingInScrollView:方法，这个方法返回的控件就是需要进行缩放的控件
+原理图如下
 </code></pre><p>   <img src=" http://7xn6d0.com1.z0.glb.clouddn.com/UIScrollView6.png" width="400" align="center"> </p>
-<pre><code>2.&#x7F29;&#x653E;&#x5B9E;&#x73B0;&#x6B65;&#x9AA4;
-&#xFF08;1&#xFF09;&#x8BBE;&#x7F6E;UIScrollView&#x7684;id&lt;UISCrollViewDelegate&gt; delegate&#x4EE3;&#x7406;&#x5BF9;&#x8C61;
-&#xFF08;2&#xFF09;&#x8BBE;&#x7F6E;minimumZoomScale &#xFF1A;&#x7F29;&#x5C0F;&#x7684;&#x6700;&#x5C0F;&#x6BD4;&#x4F8B;
-&#xFF08;3&#xFF09;&#x8BBE;&#x7F6E;maximumZoomScale &#xFF1A;&#x653E;&#x5927;&#x7684;&#x6700;&#x5927;&#x6BD4;&#x4F8B;
-&#xFF08;4&#xFF09;&#x8BA9;&#x4EE3;&#x7406;&#x5BF9;&#x8C61;&#x5B9E;&#x73B0;&#x4E0B;&#x9762;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD4;&#x56DE;&#x9700;&#x8981;&#x7F29;&#x653E;&#x7684;&#x89C6;&#x56FE;&#x63A7;&#x4EF6;
+<pre><code>2.缩放实现步骤
+（1）设置UIScrollView的id&lt;UISCrollViewDelegate&gt; delegate代理对象
+（2）设置minimumZoomScale ：缩小的最小比例
+（3）设置maximumZoomScale ：放大的最大比例
+（4）让代理对象实现下面的方法，返回需要缩放的视图控件
  - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView;
 
-3.&#x8DDF;&#x7F29;&#x653E;&#x76F8;&#x5173;&#x7684;&#x5176;&#x4ED6;&#x4EE3;&#x7406;&#x65B9;&#x6CD5;
-&#x7F29;&#x653E;&#x5B8C;&#x6BD5;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528; 
+3.跟缩放相关的其他代理方法
+缩放完毕的时候调用 
 - (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view
-&#x6B63;&#x5728;&#x7F29;&#x653E;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;
+正在缩放的时候调用
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView
+</code></pre><h3 id="UIScrollView无法滚动的解决办法"><a href="#UIScrollView无法滚动的解决办法" class="headerlink" title="UIScrollView无法滚动的解决办法"></a>UIScrollView无法滚动的解决办法</h3><pre><code>如果UIScrollView无法滚动，可能是以下原因：
+没有设置contentSize
+scrollEnabled = NO
+没有接收到触摸事件:userInteractionEnabled = NO
 </code></pre>
       
     </div>
@@ -394,13 +410,17 @@ self.scrollView.delegate = self
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/19/Xcode插件/" rel="next" title="Xcode插件">
+              <a href="/2016/07/19/iOS/Xcode使用/Xcode插件/" rel="next" title="Xcode插件">
                 <i class="fa fa-chevron-left"></i> Xcode插件
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/20/iOS/iOSUI基础知识/UIPageControl基础知识/" rel="prev" title="UIPageControl基础知识">
+                UIPageControl基础知识 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -468,7 +488,7 @@ self.scrollView.delegate = self
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -543,7 +563,7 @@ self.scrollView.delegate = self
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#UIScrollView简介"><span class="nav-number">1.</span> <span class="nav-text">UIScrollView简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIScrollView的常见属性"><span class="nav-number">2.</span> <span class="nav-text">UIScrollView的常见属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIScrollView的其他属性"><span class="nav-number">3.</span> <span class="nav-text">UIScrollView的其他属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIScrollView代理"><span class="nav-number">4.</span> <span class="nav-text">UIScrollView代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIScrollView和控制器"><span class="nav-number">5.</span> <span class="nav-text">UIScrollView和控制器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIScrollView的缩放"><span class="nav-number">6.</span> <span class="nav-text">UIScrollView的缩放</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#UIScrollView简介"><span class="nav-number">1.</span> <span class="nav-text">UIScrollView简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIScrollView的常见属性"><span class="nav-number">2.</span> <span class="nav-text">UIScrollView的常见属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIScrollView的其他属性"><span class="nav-number">3.</span> <span class="nav-text">UIScrollView的其他属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIScrollView代理"><span class="nav-number">4.</span> <span class="nav-text">UIScrollView代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIScrollView和控制器"><span class="nav-number">5.</span> <span class="nav-text">UIScrollView和控制器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIScrollView的缩放"><span class="nav-number">6.</span> <span class="nav-text">UIScrollView的缩放</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIScrollView无法滚动的解决办法"><span class="nav-number">7.</span> <span class="nav-text">UIScrollView无法滚动的解决办法</span></a></li></ol></div>
             
           </div>
         </section>

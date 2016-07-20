@@ -84,16 +84,37 @@
 
 
 
-<meta name="description" content="&amp;#x4EC0;&amp;#x4E48;&amp;#x662F;Plist&amp;#x6587;&amp;#x4EF6;&amp;#x5C5E;&amp;#x6027;&amp;#x5217;&amp;#x8868;&amp;#x6587;&amp;#x4EF6;&amp;#x53EF;&amp;#x4EE5;&amp;#x5B58;&amp;#x50A8;NSArray&amp;#x6216;&amp;#x8005;NSDictionary&amp;#x4E4B;&amp;#x7C7B;&amp;#x7684;&amp;#x6570;&amp;#x636E;">
+<meta name="description" content="UIButton的状态1.normal（普通状态）
+默认情况（Default）
+对应的枚举常量：UIControlStateNormal
+2.highlighted（高亮状态）
+按钮被按下去的时候（手指还未松开）
+对应的枚举常量：UIControlStateHighlighted
+3.disabled(失效状态，不可用状态）
+如果enabled属性为NO，就是处于disable状态，代表按钮不可以">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Plist文件使用">
-<meta property="og:url" content="http://yoursite.com/2016/07/19/Plist文件使用/index.html">
+<meta property="og:title" content="UIButton 基础知识">
+<meta property="og:url" content="http://yoursite.com/2016/07/19/iOS/iOSUI基础知识/UIButton-基础知识/index.html">
 <meta property="og:site_name" content="Soverying's Blog">
-<meta property="og:description" content="&amp;#x4EC0;&amp;#x4E48;&amp;#x662F;Plist&amp;#x6587;&amp;#x4EF6;&amp;#x5C5E;&amp;#x6027;&amp;#x5217;&amp;#x8868;&amp;#x6587;&amp;#x4EF6;&amp;#x53EF;&amp;#x4EE5;&amp;#x5B58;&amp;#x50A8;NSArray&amp;#x6216;&amp;#x8005;NSDictionary&amp;#x4E4B;&amp;#x7C7B;&amp;#x7684;&amp;#x6570;&amp;#x636E;">
-<meta property="og:updated_time" content="2016-07-19T14:26:50.000Z">
+<meta property="og:description" content="UIButton的状态1.normal（普通状态）
+默认情况（Default）
+对应的枚举常量：UIControlStateNormal
+2.highlighted（高亮状态）
+按钮被按下去的时候（手指还未松开）
+对应的枚举常量：UIControlStateHighlighted
+3.disabled(失效状态，不可用状态）
+如果enabled属性为NO，就是处于disable状态，代表按钮不可以">
+<meta property="og:updated_time" content="2016-07-19T14:27:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Plist文件使用">
-<meta name="twitter:description" content="&amp;#x4EC0;&amp;#x4E48;&amp;#x662F;Plist&amp;#x6587;&amp;#x4EF6;&amp;#x5C5E;&amp;#x6027;&amp;#x5217;&amp;#x8868;&amp;#x6587;&amp;#x4EF6;&amp;#x53EF;&amp;#x4EE5;&amp;#x5B58;&amp;#x50A8;NSArray&amp;#x6216;&amp;#x8005;NSDictionary&amp;#x4E4B;&amp;#x7C7B;&amp;#x7684;&amp;#x6570;&amp;#x636E;">
+<meta name="twitter:title" content="UIButton 基础知识">
+<meta name="twitter:description" content="UIButton的状态1.normal（普通状态）
+默认情况（Default）
+对应的枚举常量：UIControlStateNormal
+2.highlighted（高亮状态）
+按钮被按下去的时候（手指还未松开）
+对应的枚举常量：UIControlStateHighlighted
+3.disabled(失效状态，不可用状态）
+如果enabled属性为NO，就是处于disable状态，代表按钮不可以">
 
 
 
@@ -114,9 +135,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/07/19/Plist文件使用/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/19/iOS/iOSUI基础知识/UIButton-基础知识/"/>
 
-  <title> Plist文件使用 | Soverying's Blog </title>
+  <title> UIButton 基础知识 | Soverying's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -266,7 +287,7 @@
             
             
               
-                Plist文件使用
+                UIButton 基础知识
               
             
           </h1>
@@ -278,7 +299,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-19T18:56:12+08:00" content="2016-07-19">
+            <time itemprop="dateCreated" datetime="2016-07-19T18:18:14+08:00" content="2016-07-19">
               2016-07-19
             </time>
           </span>
@@ -292,8 +313,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS开发/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS开发</span>
+                  <a href="/categories/iOS开发，UI/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS开发，UI</span>
                   </a>
                 </span>
 
@@ -325,17 +346,42 @@
       
 
       
-        <h3 id="&#x4EC0;&#x4E48;&#x662F;Plist&#x6587;&#x4EF6;"><a href="#&#x4EC0;&#x4E48;&#x662F;Plist&#x6587;&#x4EF6;" class="headerlink" title="&#x4EC0;&#x4E48;&#x662F;Plist&#x6587;&#x4EF6;"></a>&#x4EC0;&#x4E48;&#x662F;Plist&#x6587;&#x4EF6;</h3><pre><code>&#x5C5E;&#x6027;&#x5217;&#x8868;&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;NSArray&#x6216;&#x8005;NSDictionary&#x4E4B;&#x7C7B;&#x7684;&#x6570;&#x636E;&#xFF0C;
-&#x8FD9;&#x79CD;&#x201C;&#x5C5E;&#x6027;&#x5217;&#x8868;&#x6587;&#x4EF6;&#x201D;&#x7684;&#x6269;&#x5C55;&#x540D;&#x662F;plist&#xFF0C;&#x56E0;&#x6B64;&#x4E5F;&#x79F0;&#x4E3A;&#x201C;plist&#x6587;&#x4EF6;&#x201D;
-</code></pre><h3 id="&#x89E3;&#x6790;Plist&#x6587;&#x4EF6;"><a href="#&#x89E3;&#x6790;Plist&#x6587;&#x4EF6;" class="headerlink" title="&#x89E3;&#x6790;Plist&#x6587;&#x4EF6;"></a>&#x89E3;&#x6790;Plist&#x6587;&#x4EF6;</h3><pre><code>1.&#x83B7;&#x5F97;Plist&#x6587;&#x4EF6;&#x7684;&#x5168;&#x8DEF;&#x5F84;
-NSBundle *bundle = [NSBundle mainBundle];
-NSString *path = [bundle pathForResource:@&quot;shops&quot; ofType:@&quot;plist&quot;];
-2.&#x52A0;&#x8F7D;plist&#x6587;&#x4EF6;
-models = [NSArray arrayWithContentsOfFile:path];
-</code></pre><h3 id="Plist&#x7684;&#x4F7F;&#x7528;&#x6CE8;&#x610F;"><a href="#Plist&#x7684;&#x4F7F;&#x7528;&#x6CE8;&#x610F;" class="headerlink" title="Plist&#x7684;&#x4F7F;&#x7528;&#x6CE8;&#x610F;"></a>Plist&#x7684;&#x4F7F;&#x7528;&#x6CE8;&#x610F;</h3><pre><code>plist&#x7684;&#x6587;&#x4EF6;&#x540D;&#x4E0D;&#x80FD;&#x53EB;&#x505A;&#x201C;info&#x201D;&#x3001;&#x201C;Info&#x201D;&#x4E4B;&#x7C7B;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;project&#x81EA;&#x5DF1;&#x6709;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x4E3A;info.plist
-</code></pre><h3 id="&#x4F7F;&#x7528;Plist&#x7684;&#x4F18;&#x70B9;"><a href="#&#x4F7F;&#x7528;Plist&#x7684;&#x4F18;&#x70B9;" class="headerlink" title="&#x4F7F;&#x7528;Plist&#x7684;&#x4F18;&#x70B9;"></a>&#x4F7F;&#x7528;Plist&#x7684;&#x4F18;&#x70B9;</h3><pre><code>plist&#x6587;&#x4EF6;&#x662F;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;
-&#x4E0E;&#x5C06;&#x6570;&#x636E;&#x5199;&#x5728;&#x4EE3;&#x7801;&#x91CC;&#x9762;&#x76F8;&#x6BD4;&#xFF0C;&#x5982;&#x679C;&#x6570;&#x636E;&#x7ECF;&#x5E38;&#x6539;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x7ECF;&#x5E38;&#x7FFB;&#x5F00;&#x5BF9;&#x5E94;&#x7684;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x9020;&#x6210;&#x4EE3;&#x7801;&#x6269;&#x5C55;&#x6027;&#x4F4E;&#x3002;
-&#x5C06;&#x6570;&#x636E;&#x653E;&#x5728;&#x6587;&#x4EF6;&#x4E2D;&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#xFF0C;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x540E;&#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6;&#x6700;&#x65B0;&#x7684;&#x6570;&#x636E;&#x3002;&#x5982;&#x679C;&#x53D8;&#x52A8;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x4EE3;&#x7801;&#x3002;
+        <h3 id="UIButton的状态"><a href="#UIButton的状态" class="headerlink" title="UIButton的状态"></a>UIButton的状态</h3><pre><code>1.normal（普通状态）
+默认情况（Default）
+对应的枚举常量：UIControlStateNormal
+2.highlighted（高亮状态）
+按钮被按下去的时候（手指还未松开）
+对应的枚举常量：UIControlStateHighlighted
+3.disabled(失效状态，不可用状态）
+如果enabled属性为NO，就是处于disable状态，代表按钮不可以被点击
+对应的枚举常量：UIControlStateDisabled
+</code></pre><h3 id="UIButton的样式"><a href="#UIButton的样式" class="headerlink" title="UIButton的样式"></a>UIButton的样式</h3><pre><code>在用代码创建按钮的同时指定按钮样式
+UIButton *btn = [UIButton  buttonWithType:UIButtonTypeCustom]; 
+UIButtonTypeCustom：无类型，按钮的内容需要自定义
+UIButtonTypeDetailDisclosure： 
+UIButtonTypeInfoLight： 
+UIButtonTypeInfoDark： 
+UIButtonTypeContactAdd
+</code></pre><p>注：为了保证高亮状态下的图片正常显示，必须设置按钮的type为custom</p>
+<h3 id="UIButton的常见设置"><a href="#UIButton的常见设置" class="headerlink" title="UIButton的常见设置"></a>UIButton的常见设置</h3><pre><code>设置按钮的文字
+- (void)setTitle:(NSString *)title forState:(UIControlState)state;
+设置按钮的文字颜色
+- (void)setTitleColor:(UIColor *)color forState:(UIControlState)state;
+设置按钮内部的小图片
+- (void)setImage:(UIImage *)image forState:(UIControlState)state; 
+设置按钮的背景图片
+- (void)setBackgroundImage:(UIImage *)image forState:(UIControlState)state;
+
+设置按钮的文字字体（需要拿到按钮内部的label来设置）
+btn.titleLabel.font = [UIFont systemFontOfSize:13];
+获得按钮的文字
+- (NSString *)titleForState:(UIControlState)state; 
+获得按钮的文字颜色
+- (UIColor *)titleColorForState:(UIControlState)state;
+获得按钮内部的小图片
+- (UIImage *)imageForState:(UIControlState)state;
+获得按钮的背景图片
+- (UIImage *)backgroundImageForState:(UIControlState)state;
 </code></pre>
       
     </div>
@@ -360,16 +406,16 @@ models = [NSArray arrayWithContentsOfFile:path];
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/19/UIButton-基础知识/" rel="next" title="UIButton 基础知识">
-                <i class="fa fa-chevron-left"></i> UIButton 基础知识
+              <a href="/2014/10/12/iOS/iOSUI基础知识/UIView基础知识/" rel="next" title="UIView基础知识">
+                <i class="fa fa-chevron-left"></i> UIView基础知识
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/19/UIButton、UIImageView、UILabel的选择/" rel="prev" title="UIButton、UIImageView、UILabel的选择">
-                UIButton、UIImageView、UILabel的选择 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/19/iOS/iOS数据库/Plist文件使用/" rel="prev" title="Plist文件使用">
+                Plist文件使用 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -438,7 +484,7 @@ models = [NSArray arrayWithContentsOfFile:path];
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -513,7 +559,7 @@ models = [NSArray arrayWithContentsOfFile:path];
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Plist文件"><span class="nav-number">1.</span> <span class="nav-text">什么是Plist文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析Plist文件"><span class="nav-number">2.</span> <span class="nav-text">解析Plist文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Plist的使用注意"><span class="nav-number">3.</span> <span class="nav-text">Plist的使用注意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Plist的优点"><span class="nav-number">4.</span> <span class="nav-text">使用Plist的优点</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#UIButton的状态"><span class="nav-number">1.</span> <span class="nav-text">UIButton的状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIButton的样式"><span class="nav-number">2.</span> <span class="nav-text">UIButton的样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UIButton的常见设置"><span class="nav-number">3.</span> <span class="nav-text">UIButton的常见设置</span></a></li></ol></div>
             
           </div>
         </section>
