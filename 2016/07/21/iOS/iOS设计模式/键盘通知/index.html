@@ -84,15 +84,16 @@
 
 
 
-<meta name="description" content="iOS开发，信息安全">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Soverying's Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2014/10/index.html">
+<meta name="description" content="键盘状态改变的时候,系统会发出一些特定的通知，通知名如下UIKeyboardWillShowNotification // 键盘即将显示UIKeyboardDidShowNotification // 键盘显示完毕UIKeyboardWillHideNotification // 键盘即将隐藏UIKeyboardDidHideNotification // 键盘隐藏完毕UIKeyboardWil">
+<meta property="og:type" content="article">
+<meta property="og:title" content="键盘通知">
+<meta property="og:url" content="http://yoursite.com/2016/07/21/iOS/iOS设计模式/键盘通知/index.html">
 <meta property="og:site_name" content="Soverying's Blog">
-<meta property="og:description" content="iOS开发，信息安全">
+<meta property="og:description" content="键盘状态改变的时候,系统会发出一些特定的通知，通知名如下UIKeyboardWillShowNotification // 键盘即将显示UIKeyboardDidShowNotification // 键盘显示完毕UIKeyboardWillHideNotification // 键盘即将隐藏UIKeyboardDidHideNotification // 键盘隐藏完毕UIKeyboardWil">
+<meta property="og:updated_time" content="2016-07-21T13:31:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Soverying's Blog">
-<meta name="twitter:description" content="iOS开发，信息安全">
+<meta name="twitter:title" content="键盘通知">
+<meta name="twitter:description" content="键盘状态改变的时候,系统会发出一些特定的通知，通知名如下UIKeyboardWillShowNotification // 键盘即将显示UIKeyboardDidShowNotification // 键盘显示完毕UIKeyboardWillHideNotification // 键盘即将隐藏UIKeyboardDidHideNotification // 键盘隐藏完毕UIKeyboardWil">
 
 
 
@@ -113,9 +114,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2014/10/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/21/iOS/iOS设计模式/键盘通知/"/>
 
-  <title> 归档 | Soverying's Blog </title>
+  <title> 键盘通知 | Soverying's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -136,7 +137,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,66 +245,120 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 30 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
 
-      
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                键盘通知
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-21T21:29:38+08:00" content="2016-07-21">
+              2016-07-21
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
       
 
       
+        <ul>
+<li><p>键盘状态改变的时候,系统会发出一些特定的通知，通知名如下<br>UIKeyboardWillShowNotification // 键盘即将显示<br>UIKeyboardDidShowNotification // 键盘显示完毕<br>UIKeyboardWillHideNotification // 键盘即将隐藏<br>UIKeyboardDidHideNotification // 键盘隐藏完毕<br>UIKeyboardWillChangeFrameNotification // 键盘的位置尺寸即将发生改变<br>UIKeyboardDidChangeFrameNotification // 键盘的位置尺寸改变完毕</p>
+</li>
+<li><p>系统发出键盘通知时,会附带一下跟键盘有关的额外信息(字典),字典常见的key如下:<br>UIKeyboardFrameBeginUserInfoKey // 键盘刚开始的frame<br>UIKeyboardFrameEndUserInfoKey // 键盘最终的frame(动画执行完毕后)<br>UIKeyboardAnimationDurationUserInfoKey // 键盘动画的时间<br>UIKeyboardAnimationCurveUserInfoKey // 键盘动画的执行节奏(快慢)</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2014">2014</h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/21/iOS/iOS设计模式/UIDevice通知/" rel="next" title="UIDevice通知">
+                <i class="fa fa-chevron-left"></i> UIDevice通知
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
         </div>
       
-      
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2014/10/12/iOS/iOSUI基础知识/UIView基础知识/" itemprop="url">
-              
-                <span itemprop="name">UIView基础知识</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2014-10-12T18:09:20+08:00"
-              content="2014-10-12" >
-          10-12
-        </time>
-      </div>
-
-    </header>
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -311,6 +366,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -330,8 +389,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -410,6 +478,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -506,11 +585,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   
