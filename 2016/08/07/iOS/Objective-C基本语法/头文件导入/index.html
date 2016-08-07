@@ -84,15 +84,67 @@
 
 
 
-<meta name="description" content="iOS开发，信息安全">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Soverying's Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2014/10/index.html">
+<meta name="description" content="include
+作用:include是将右边的文件拷贝到当前的位置
+注意: 
+
+include后面不一定要写文件名称 也可以写路径(相对路径/ 全路径)
+
+include指令不一定要写在文件的头部
+
+缺点：可能出现重复导入头文件的情况，还需要使用条件编译来解决 .
+
+
+
+
+
+import
+作用
+（1）import的功能和include一样, 是将右边的文件拷贝到当前import的位置
+（2）imp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="头文件导入-include,import异同">
+<meta property="og:url" content="http://yoursite.com/2016/08/07/iOS/Objective-C基本语法/头文件导入/index.html">
 <meta property="og:site_name" content="Soverying's Blog">
-<meta property="og:description" content="iOS开发，信息安全">
+<meta property="og:description" content="include
+作用:include是将右边的文件拷贝到当前的位置
+注意: 
+
+include后面不一定要写文件名称 也可以写路径(相对路径/ 全路径)
+
+include指令不一定要写在文件的头部
+
+缺点：可能出现重复导入头文件的情况，还需要使用条件编译来解决 .
+
+
+
+
+
+import
+作用
+（1）import的功能和include一样, 是将右边的文件拷贝到当前import的位置
+（2）imp">
+<meta property="og:updated_time" content="2016-08-07T14:03:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Soverying's Blog">
-<meta name="twitter:description" content="iOS开发，信息安全">
+<meta name="twitter:title" content="头文件导入-include,import异同">
+<meta name="twitter:description" content="include
+作用:include是将右边的文件拷贝到当前的位置
+注意: 
+
+include后面不一定要写文件名称 也可以写路径(相对路径/ 全路径)
+
+include指令不一定要写在文件的头部
+
+缺点：可能出现重复导入头文件的情况，还需要使用条件编译来解决 .
+
+
+
+
+
+import
+作用
+（1）import的功能和include一样, 是将右边的文件拷贝到当前import的位置
+（2）imp">
 
 
 
@@ -113,9 +165,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2014/10/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/08/07/iOS/Objective-C基本语法/头文件导入/"/>
 
-  <title> 归档 | Soverying's Blog </title>
+  <title> 头文件导入-include,import异同 | Soverying's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -136,7 +188,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,65 +296,161 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-       
-      
-      OK! 目前共计 31 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
 
-      
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                头文件导入-include,import异同
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-07T13:12:09+08:00" content="2016-08-07">
+              2016-08-07
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
       
 
       
+        <h3 id="include"><a href="#include" class="headerlink" title="include"></a>include</h3><ul>
+<li>作用:include是将右边的文件拷贝到当前的位置</li>
+<li><p>注意: </p>
+<ul>
+<li><p>include后面不一定要写文件名称 也可以写路径(相对路径/ 全路径)</p>
+</li>
+<li><p>include指令不一定要写在文件的头部</p>
+<ul>
+<li>缺点：可能出现重复导入头文件的情况，还需要使用条件编译来解决 .</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="import"><a href="#import" class="headerlink" title="import"></a>import</h3><ul>
+<li><p>作用</p>
+<p>（1）import的功能和include一样, 是将右边的文件拷贝到当前import的位置</p>
+<p>（2）import可以防止重复导入, 避免程序员去书写头文件卫士</p>
+</li>
+<li><p>优点: 会自动防止重复拷贝</p>
+</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li><p>相同点：</p>
+<ul>
+<li>都是预处理指令</li>
+<li>都是用来导入头文件，将后面的文件拷贝到当前指令的位置</li>
+<li><p>后面可以跟 &lt;&gt; 和 “” ，使用 &lt;&gt; 和 “”的区别如下</p>
+<pre><code>（1）使用&lt;&gt;
+
+ 代表会先从开发工具的编译环境中去查找
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/；
+ 如果开发工具的编译环境中没有找到, 那么会再去系统的编译环境中找/usr/include/stdio.h
+
+（2）使用&quot;&quot;
+代表会先从当前文件所在的文件夹下面查找；
+如果在当前文件所在的文件夹下面没有找到, 那么就回去开发工具的编译环境中去查找；
+如果编译环境中没有找到, 那么会再去系统的编译环境中找
+</code></pre><ul>
+<li>不同点：</li>
+<li>include 可能出现重复导入头文件的情况，解决重复导入还需要条件编译指令来解决</li>
+<li>import可以防止重复导入, 避免程序员去书写头文件卫士</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2014">2014</h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/21/iOS/iOS设计模式/键盘通知/" rel="next" title="键盘通知">
+                <i class="fa fa-chevron-left"></i> 键盘通知
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
         </div>
       
-      
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2014/10/12/iOS/iOSUI基础知识/UIView基础知识/" itemprop="url">
-              
-                <span itemprop="name">UIView基础知识</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2014-10-12T18:09:20+08:00"
-              content="2014-10-12" >
-          10-12
-        </time>
-      </div>
-
-    </header>
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -310,6 +458,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -329,8 +481,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -409,6 +570,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#include"><span class="nav-number">1.</span> <span class="nav-text">include</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#import"><span class="nav-number">2.</span> <span class="nav-text">import</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -505,11 +677,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   
