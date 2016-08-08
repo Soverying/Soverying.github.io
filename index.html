@@ -268,146 +268,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/08/07/iOS/Objective-C基本语法/头文件导入/" itemprop="url">
-                  头文件导入(include,import异同)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-07T13:12:09+08:00" content="2016-08-07">
-              2016-08-07
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="include"><a href="#include" class="headerlink" title="include"></a>include</h3><ul>
-<li>作用:include是将右边的文件拷贝到当前的位置</li>
-<li><p>注意: </p>
-<ul>
-<li><p>include后面不一定要写文件名称 也可以写路径(相对路径/ 全路径)</p>
-</li>
-<li><p>include指令不一定要写在文件的头部</p>
-</li>
-</ul>
-</li>
-<li>缺点：可能出现重复导入头文件的情况，还需要使用条件编译来解决 .</li>
-</ul>
-<h3 id="import"><a href="#import" class="headerlink" title="import"></a>import</h3><ul>
-<li><p>作用</p>
-<p>（1）import的功能和include一样, 是将右边的文件拷贝到当前import的位置</p>
-<p>（2）import可以防止重复导入, 避免程序员去书写头文件卫士</p>
-</li>
-<li><p>优点: 会自动防止重复拷贝</p>
-</li>
-</ul>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
-<li><p>相同点：</p>
-<ul>
-<li>都是预处理指令</li>
-<li>都是用来导入头文件，将后面的文件拷贝到当前指令的位置</li>
-<li><p>后面可以跟 &lt;&gt; 和 “” ，使用 &lt;&gt; 和 “”的区别如下</p>
-<pre><code>（1）使用&lt;&gt;
-
- 代表会先从开发工具的编译环境中去查找
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/；
- 如果开发工具的编译环境中没有找到, 那么会再去系统的编译环境中找/usr/include/stdio.h
-
-（2）使用&quot;&quot;
-代表会先从当前文件所在的文件夹下面查找；
-如果在当前文件所在的文件夹下面没有找到, 那么就回去开发工具的编译环境中去查找；
-如果编译环境中没有找到, 那么会再去系统的编译环境中找
-</code></pre></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>不同点：<ul>
-<li>include 可能出现重复导入头文件的情况，解决重复导入还需要条件编译指令来解决</li>
-<li>import可以防止重复导入, 避免程序员去书写头文件卫士</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/07/21/iOS/iOS设计模式/键盘通知/" itemprop="url">
                   键盘通知
                 </a>
@@ -1314,6 +1174,99 @@ queue：决定了block在哪个操作队列中执行，如果传nil，默认在�
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/20/iOS/iOS设计模式/KVC机制/" itemprop="url">
+                  KVC机制
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-20T23:14:38+08:00" content="2016-07-20">
+              2016-07-20
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -1359,7 +1312,7 @@ queue：决定了block在哪个操作队列中执行，如果传nil，默认在�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-count">32</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
