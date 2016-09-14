@@ -268,6 +268,99 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/20/iOS/iOS中常见面试/block深度学习/" itemprop="url">
+                  block深度学习
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-20T23:11:06+08:00" content="2016-07-20">
+              2016-07-20
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/20/iOS/iOS中常见面试/iOS中循环引用/" itemprop="url">
                   iOS中循环引用
                 </a>
@@ -1084,120 +1177,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/20/iOS/iOSUI基础知识/UITableView基础知识/" itemprop="url">
-                  UITableView基础知识
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-20T22:31:55+08:00" content="2016-07-20">
-              2016-07-20
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="UITableView展示数据的过程"><a href="#UITableView展示数据的过程" class="headerlink" title="UITableView展示数据的过程"></a>UITableView展示数据的过程</h3><pre><code>UITableView需要一个数据源(dataSource)来显示数据
-UITableView会向数据源查询一共有多少行数据以及每一行显示什么数据等
-补充：凡是遵守UITableViewDataSource协议的OC对象，都可以是UITableView的数据源 
-
-下面用代码辅助解释：
-1.调用数据源的下面方法得知一共有多少组数据
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
-
-2.调用数据源的下面方法得知每一组有多少行数据
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
-
-3.调用数据源的下面方法得知每一行显示什么内容
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;  
-</code></pre><h3 id="Cell简介"><a href="#Cell简介" class="headerlink" title="Cell简介"></a>Cell简介</h3><pre><code>UITableView的每一行都是一个UITableViewCell，通过dataSource的tableView:cellForRowAtIndexPath:方法来初始化每一行
-UITableViewCell内部有个默认的子视图:contentView，contentView是UITableViewCell所显示内容的父视图，可显示一些辅助指示视图
-
-辅助指示视图的作用是显示一个表示动作的图标，可以通过设置UITableViewCell的accessoryType来显示，默认是UITableViewCellAccessoryNone(不显示辅助指示视图)，其他值如下:
-UITableViewCellAccessoryDisclosureIndicator
-UITableViewCellAccessoryDetailDisclosureButton
-UITableViewCellAccessoryCheckmark
-还可以通过cell的accessoryView属性来自定义辅助指示视图（比如往右边放一个开关）
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1243,7 +1222,7 @@ UITableViewCellAccessoryCheckmark
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">35</span>
+              <span class="site-state-item-count">36</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
