@@ -268,120 +268,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/20/iOS/iOSUI基础知识/UITableView基础知识/" itemprop="url">
-                  UITableView基础知识
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-20T22:31:55+08:00" content="2016-07-20">
-              2016-07-20
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="UITableView展示数据的过程"><a href="#UITableView展示数据的过程" class="headerlink" title="UITableView展示数据的过程"></a>UITableView展示数据的过程</h3><pre><code>UITableView需要一个数据源(dataSource)来显示数据
-UITableView会向数据源查询一共有多少行数据以及每一行显示什么数据等
-补充：凡是遵守UITableViewDataSource协议的OC对象，都可以是UITableView的数据源 
-
-下面用代码辅助解释：
-1.调用数据源的下面方法得知一共有多少组数据
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
-
-2.调用数据源的下面方法得知每一组有多少行数据
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
-
-3.调用数据源的下面方法得知每一行显示什么内容
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;  
-</code></pre><h3 id="Cell简介"><a href="#Cell简介" class="headerlink" title="Cell简介"></a>Cell简介</h3><pre><code>UITableView的每一行都是一个UITableViewCell，通过dataSource的tableView:cellForRowAtIndexPath:方法来初始化每一行
-UITableViewCell内部有个默认的子视图:contentView，contentView是UITableViewCell所显示内容的父视图，可显示一些辅助指示视图
-
-辅助指示视图的作用是显示一个表示动作的图标，可以通过设置UITableViewCell的accessoryType来显示，默认是UITableViewCellAccessoryNone(不显示辅助指示视图)，其他值如下:
-UITableViewCellAccessoryDisclosureIndicator
-UITableViewCellAccessoryDetailDisclosureButton
-UITableViewCellAccessoryCheckmark
-还可以通过cell的accessoryView属性来自定义辅助指示视图（比如往右边放一个开关）
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/07/20/iOS/iOS多线程/NSTimer基础知识/" itemprop="url">
                   NSTimer基础知识
                 </a>
@@ -1508,6 +1394,112 @@ btn.titleLabel.font = [UIFont systemFontOfSize:13];
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/03/08/iOS/Objective-C基本语法/import-后面跟的-Foundation-Foundation-h-的解释/" itemprop="url">
+                  #import后面跟着的系统头文件的解释
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-03-08T12:14:29+08:00" content="2015-03-08">
+              2015-03-08
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>例子：#import <foundation foundation.h=""></foundation></p>
+<ul>
+<li>Foundation：是指工具箱使用的是Foundation<ul>
+<li>工具箱的地址:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks</li>
+<li>工具箱里面的内容如下图：<br><img src="http://7xn6d0.com1.z0.glb.clouddn.com/import%E5%90%8E%E9%9D%A2%E6%98%BE%E7%A4%BA%E7%9A%84.png" width="400" align="center"> </li>
+</ul>
+</li>
+<li>Foundation.h:工具箱Foundation的主头文件。<ul>
+<li>主头文件：拷贝了该工具箱中所有工具的头文件, 只需要导入主头文件就可以使用该工具箱中所有的工具, 避免了每次使用都要导入一个对应的头文件</li>
+<li>Foundation.h里面的内容如下图：<br><img src=" http://7xn6d0.com1.z0.glb.clouddn.com/Foundation%E4%B8%BB%E5%A4%B4%E6%96%87%E4%BB%B6.png" width="400" align="center"> </li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -1553,7 +1545,7 @@ btn.titleLabel.font = [UIFont systemFontOfSize:13];
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">36</span>
+              <span class="site-state-item-count">35</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

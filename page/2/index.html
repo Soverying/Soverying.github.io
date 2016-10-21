@@ -268,99 +268,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/20/iOS/iOS中常见面试/block深度学习/" itemprop="url">
-                  block深度学习
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-20T23:11:06+08:00" content="2016-07-20">
-              2016-07-20
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/07/20/iOS/iOS中常见面试/iOS中循环引用/" itemprop="url">
                   iOS中循环引用
                 </a>
@@ -405,7 +312,10 @@
       
         
           
-            
+            <h3 id="1-NSTimer"><a href="#1-NSTimer" class="headerlink" title="1 NSTimer"></a>1 NSTimer</h3><p>一方面，NSTimer经常会被作为某个类的成员变量，而NSTimer初始化时要指定self为target，容易造成循环引用。 另一方面，若timer一直处于validate的状态，则其引用计数将始终大于0。</p>
+<h3 id="2-delegate"><a href="#2-delegate" class="headerlink" title="2 delegate"></a>2 delegate</h3><p>避免delegate循环引用的方法是：声明delegate时请用assign(MRC)或者weak(ARC)</p>
+<h3 id="3-block"><a href="#3-block" class="headerlink" title="3 block"></a>3 block</h3><p>block在copy时都会对block内部用到的对象进行强引用(ARC)或者retainCount增1(非ARC)。在ARC与非ARC环境下对block使用不当都会引起循环引用问题，一般表现为，某个类将block作为自己的属性变量，然后该类在block的方法体里面又使用了该类本身，简单说就是self.someBlock = ^(Type var){[self dosomething];或者self.otherVar = XXX;或者_otherVar = …};block的这种循环引用会被编译器捕捉到并及时提醒。</p>
+
           
         
       
@@ -1177,6 +1087,120 @@
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/20/iOS/iOSUI基础知识/UITableView基础知识/" itemprop="url">
+                  UITableView基础知识
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-20T22:31:55+08:00" content="2016-07-20">
+              2016-07-20
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="UITableView展示数据的过程"><a href="#UITableView展示数据的过程" class="headerlink" title="UITableView展示数据的过程"></a>UITableView展示数据的过程</h3><pre><code>UITableView需要一个数据源(dataSource)来显示数据
+UITableView会向数据源查询一共有多少行数据以及每一行显示什么数据等
+补充：凡是遵守UITableViewDataSource协议的OC对象，都可以是UITableView的数据源 
+
+下面用代码辅助解释：
+1.调用数据源的下面方法得知一共有多少组数据
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
+
+2.调用数据源的下面方法得知每一组有多少行数据
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+
+3.调用数据源的下面方法得知每一行显示什么内容
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;  
+</code></pre><h3 id="Cell简介"><a href="#Cell简介" class="headerlink" title="Cell简介"></a>Cell简介</h3><pre><code>UITableView的每一行都是一个UITableViewCell，通过dataSource的tableView:cellForRowAtIndexPath:方法来初始化每一行
+UITableViewCell内部有个默认的子视图:contentView，contentView是UITableViewCell所显示内容的父视图，可显示一些辅助指示视图
+
+辅助指示视图的作用是显示一个表示动作的图标，可以通过设置UITableViewCell的accessoryType来显示，默认是UITableViewCellAccessoryNone(不显示辅助指示视图)，其他值如下:
+UITableViewCellAccessoryDisclosureIndicator
+UITableViewCellAccessoryDetailDisclosureButton
+UITableViewCellAccessoryCheckmark
+还可以通过cell的accessoryView属性来自定义辅助指示视图（比如往右边放一个开关）
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -1222,7 +1246,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">36</span>
+              <span class="site-state-item-count">35</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

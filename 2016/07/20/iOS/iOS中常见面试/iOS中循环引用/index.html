@@ -84,16 +84,22 @@
 
 
 
-<meta name="description" content="iOS开发，信息安全">
+<meta name="description" content="1 NSTimer一方面，NSTimer经常会被作为某个类的成员变量，而NSTimer初始化时要指定self为target，容易造成循环引用。 另一方面，若timer一直处于validate的状态，则其引用计数将始终大于0。
+2 delegate避免delegate循环引用的方法是：声明delegate时请用assign(MRC)或者weak(ARC)
+3 blockblock在copy时都会对b">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS中循环引用">
 <meta property="og:url" content="http://yoursite.com/2016/07/20/iOS/iOS中常见面试/iOS中循环引用/index.html">
 <meta property="og:site_name" content="Soverying's Blog">
-<meta property="og:description" content="iOS开发，信息安全">
-<meta property="og:updated_time" content="2016-07-20T15:09:27.000Z">
+<meta property="og:description" content="1 NSTimer一方面，NSTimer经常会被作为某个类的成员变量，而NSTimer初始化时要指定self为target，容易造成循环引用。 另一方面，若timer一直处于validate的状态，则其引用计数将始终大于0。
+2 delegate避免delegate循环引用的方法是：声明delegate时请用assign(MRC)或者weak(ARC)
+3 blockblock在copy时都会对b">
+<meta property="og:updated_time" content="2016-10-21T09:46:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS中循环引用">
-<meta name="twitter:description" content="iOS开发，信息安全">
+<meta name="twitter:description" content="1 NSTimer一方面，NSTimer经常会被作为某个类的成员变量，而NSTimer初始化时要指定self为target，容易造成循环引用。 另一方面，若timer一直处于validate的状态，则其引用计数将始终大于0。
+2 delegate避免delegate循环引用的方法是：声明delegate时请用assign(MRC)或者weak(ARC)
+3 blockblock在copy时都会对b">
 
 
 
@@ -306,7 +312,10 @@
       
 
       
-        
+        <h3 id="1-NSTimer"><a href="#1-NSTimer" class="headerlink" title="1 NSTimer"></a>1 NSTimer</h3><p>一方面，NSTimer经常会被作为某个类的成员变量，而NSTimer初始化时要指定self为target，容易造成循环引用。 另一方面，若timer一直处于validate的状态，则其引用计数将始终大于0。</p>
+<h3 id="2-delegate"><a href="#2-delegate" class="headerlink" title="2 delegate"></a>2 delegate</h3><p>避免delegate循环引用的方法是：声明delegate时请用assign(MRC)或者weak(ARC)</p>
+<h3 id="3-block"><a href="#3-block" class="headerlink" title="3 block"></a>3 block</h3><p>block在copy时都会对block内部用到的对象进行强引用(ARC)或者retainCount增1(非ARC)。在ARC与非ARC环境下对block使用不当都会引起循环引用问题，一般表现为，某个类将block作为自己的属性变量，然后该类在block的方法体里面又使用了该类本身，简单说就是self.someBlock = ^(Type var){[self dosomething];或者self.otherVar = XXX;或者_otherVar = …};block的这种循环引用会被编译器捕捉到并及时提醒。</p>
+
       
     </div>
 
@@ -338,8 +347,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/20/iOS/iOS中常见面试/block深度学习/" rel="prev" title="block深度学习">
-                block深度学习 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/20/iOS/iOSUI遇到的问题/设置状态栏/" rel="prev" title="设置状态栏">
+                设置状态栏 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -408,7 +417,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">36</span>
+              <span class="site-state-item-count">35</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -483,7 +492,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-NSTimer"><span class="nav-number">1.</span> <span class="nav-text">1 NSTimer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-delegate"><span class="nav-number">2.</span> <span class="nav-text">2 delegate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-block"><span class="nav-number">3.</span> <span class="nav-text">3 block</span></a></li></ol></div>
             
           </div>
         </section>
